@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+
+    <!-- Título para el navegador y los buscadores -->
+    <title>Clase 11</title>
+
+    <!-- Descripción de la página para los buscadores -->
+    <meta name="description" content="Página de ejemplos vistos en clase">
+
+    <!-- Palabras clave para los buscadores -->
+    <meta name="keywords" content="p, h1, h2, h3, h4, h5">
+
+    <!-- Autor de la página -->
+    <meta name="author" content="@jonascampos">
+
+    <!-- Favicon de la página -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Codificación-->
+    <meta charset="UTF-8">
+
+    <!-- Para que la web sea responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Para algunos navegadores móviles -->
+    <meta name="theme-color" content="#1e7bbf">
+
+</head>
+
+<body>
+    <header>
+          <h1>Ejemplos vistos en la Clase 11</h1>
+        <p><a href="index.html">👈 Volver atrás</a></p>
+        <hr />
+    </header>
+  <main>
+    <h2>Ejemplos vistos en la Clase 11</h2>
+    <div>
+    <h3>Etiqueta Select</h3>
+    
+    <p>Seleccione el color de sus zapatillas</p>
+    
+    <form action="#" name="registro" method="get" autocomplete="on">
+    
+    <p><input type="radio" name="color" value="Negro" id="black"> <label for="black">Negro</label></p>
+    <p><input type="radio" name="color" value="Blanco" id="white"><label for="white">Blanco</label></p>
+    <p><input type="radio" name="color" value="Azul" id="blue"><label for="blue">Azul</label></p>
+
+    <label for="size">Seleccione la talla</label>
+    <select name="talla" id="size">
+        <option value="">-</option>
+        <option value="35">Talla 35</option>
+        <option value="36">Talla 36</option>
+        <option value="37">Talla 37</option>
+        <option value="38">Talla 38</option>
+        <option value="39">Talla 39</option>
+    </select>
+    <hr>
+    <br />
+    <label for="size">Seleccione la talla con el atributo selected</label>
+    <select name="talla" id="size">
+        <option value="">-</option>
+        <option value="35">Talla 35</option>
+        <option value="36">Talla 36</option>
+        <option value="37" selected>Talla 37</option>
+        <option value="38">Talla 38</option>
+        <option value="39">Talla 39</option>
+    </select>
+    <hr>
+     <br />
+    <label for="size">Seleccione la talla con el atributo multiple y size</label>
+    <select name="talla" id="size" multiple size="2">
+        <option value="">-</option>
+        <option value="35">Talla 35</option>
+        <option value="36">Talla 36</option>
+        <option value="37">Talla 37</option>
+        <option value="38">Talla 38</option>
+        <option value="39">Talla 39</option>
+    </select>
+    
+
+    
+    <p><button>Enviar</button></p>
+    </form>
+
+
+    </main>
+    <hr>
+    <footer>
+        
+        
+        © 2025 - Todos los derechos reservados
+    </footer>
+</body>
+
+</html>

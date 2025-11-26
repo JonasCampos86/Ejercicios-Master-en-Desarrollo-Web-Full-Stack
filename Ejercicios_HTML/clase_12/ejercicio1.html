@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+
+    <!-- Título para el navegador y los buscadores -->
+    <title>Clase 12</title>
+
+    <!-- Descripción de la página para los buscadores -->
+    <meta name="description" content="Página de ejemplos vistos en clase">
+
+    <!-- Palabras clave para los buscadores -->
+    <meta name="keywords" content="p, h1, h2, h3, h4, h5">
+
+    <!-- Autor de la página -->
+    <meta name="author" content="@jonascampos">
+
+    <!-- Favicon de la página -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Codificación-->
+    <meta charset="UTF-8">
+
+    <!-- Para que la web sea responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Para algunos navegadores móviles -->
+    <meta name="theme-color" content="#1e7bbf">
+
+</head>
+
+<body>
+    <header>
+        <p><a href="index.html">👈 Volver atrás</a></p>
+        <hr />
+    </header>
+  <main>
+    <h1>Formulario de registro - Mi web</h1>
+    <hr>
+   
+    <form action="" name="registro" method="get" autocomplete="off">
+    <p>
+        <label for="name">Nombre</label><br>
+        <input type="text" name="Nombre" id="name" maxlength="50" required placeholder="Pepito">
+    </p>
+    <p>
+        <label for="first/second_name">Apellidos</label><br>
+        <input type="text" name="Apellidos" id="first/second_name" maxlength="50" required placeholder="Perez Lopez">
+    </p>
+    <p>
+        Sexo: <br>
+       
+        <input type="radio" required name="genero" id="man" value="Hombre">
+        <label for="man">Hombre</label><br>
+        <input type="radio" required name="genero" id="woman" value="Mujer">
+        <label for="woman">Mujer</label>
+    </p>
+    <p>
+        <label for="correo">Correo electronico</label><br>
+        <input type="email" required name="correo" id="correo" placeholder="ejemplo@hotmail.es">
+    </p>
+    
+    <p>
+        <label for="poblacion">Población</label><br>
+        <select name="Población" id="poblacion" required>
+            <option value="">-</option>
+            <option value="Alicante">Alicante</option>
+            <option value="Madrid">Madrid</option>
+            <option value="Sevilla">Sevilla</option>
+            <option value="Valencia">Valencia</option>
+        </select>
+    </p>
+    <p>
+        <label for="descripcion">Descripción</label><br>
+        <textarea name="Descripción" id="descripcion"></textarea>
+    </p>
+    <p>
+        
+        <input type="checkbox" name="aceptación" id="news" required="on" checked>
+        <label for="news" >Deseo recibir información sobre novedades y ofertas </label>
+    <p>
+        
+        <input type="checkbox" name="validacion" id="validacion" required="on" >
+        <label for="validacion" >Declaro haber leido y aceptar las condiciones generales del 
+            programa y la normativa sobre la protección de datos.</label>
+    </p>
+    
+    <button>Enviar</button>
+    </form>
+
+
+    </main>
+    <hr>
+    <footer>
+        
+        
+        © 2025 - Todos los derechos reservados
+    </footer>
+</body>
+
+</html>

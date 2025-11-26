@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+
+    <!-- Título para el navegador y los buscadores -->
+    <title>Información sobre el producto</title>
+
+    <!-- Descripción de la página para los buscadores -->
+    <meta name="description" content="Página de ejemplos vistos en clase">
+
+    <!-- Palabras clave para los buscadores -->
+    <meta name="keywords" content="p, h1, h2, h3, h4, h5">
+
+    <!-- Autor de la página -->
+    <meta name="author" content="@jonascampos">
+
+    <!-- Favicon de la página -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Codificación-->
+    <meta charset="UTF-8">
+
+    <!-- Para que la web sea responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Para algunos navegadores móviles -->
+    <meta name="theme-color" content="#1e7bbf">
+
+</head>
+
+<body>
+    <header>
+        <p><a href="index.html">👈 Volver atrás</a></p>
+        <hr />
+    </header>
+  <main>
+    <h2>Información sobre el producto</h2>
+   
+    <form action="" name="registro" method="post"  enctype="multipart/form-data">
+    <fieldset>
+        <legend>Datos básicos</legend>
+    <p>
+        <label for="nombre">Nombre</label><br>
+        <input type="text" name="nombre" id="nombre" size="50">
+    </p>
+    <p>
+        <label for="descripcion">Descripción</label><br>
+        <textarea name="desc" id="descripcion" cols="50" rows="7"></textarea>
+    </p>
+    <p>
+        <label for="foto">Foto</label>
+        <input type="file" name="foto" id="foto">
+    </p>
+    <p>
+        <input type="checkbox" name="contador" id="contador">
+        <label for="contador">Añadir contador de visitas</label>
+        
+    </p>
+    </fieldset>
+    <fieldset>
+        <legend>Datos económicos</legend>
+    
+        <p>
+            <label for="Precio">Precio</label><input type="text" name="Precio" id="Precio" size="4">€
+            <label for="Impuestos">Impuestos</label>
+            <select name="porcentajes" id="Precio" size="1">
+                <option value="4">4%</option>
+                <option value="7">7%</option>
+                <option value="16">16%</option>
+                <option value="25">25%</option>
+            </select>
+        </p>
+        <p>
+            Promoción <br>
+            <input type="radio" name="eleccion" id="0" >
+            <label for="0">Ninguno</label> <br>
+            <input type="radio" name="eleccion" id="tg">
+            <label for="tg">Transporte gratuito</label> <br>
+            <input type="radio" name="eleccion" id="5"> 
+            <label for="5">Descuento 5%</label>
+        </p>
+       
+    
+    </form>
+    </fieldset>
+    <br>
+    <button>Enviar</button>
+    </main>
+    <hr>
+    <footer>
+        © 2025 - Todos los derechos reservados
+    </footer>
+</body>
+
+</html>

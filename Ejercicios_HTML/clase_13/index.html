@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+
+    <!-- Título para el navegador y los buscadores -->
+    <title>Clase 13</title>
+
+    <!-- Descripción de la página para los buscadores -->
+    <meta name="description" content="Página de ejemplos vistos en clase">
+
+    <!-- Palabras clave para los buscadores -->
+    <meta name="keywords" content="p, h1, h2, h3, h4, h5">
+
+    <!-- Autor de la página -->
+    <meta name="author" content="@jonascampos">
+
+    <!-- Favicon de la página -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Codificación-->
+    <meta charset="UTF-8">
+
+    <!-- Para que la web sea responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Para algunos navegadores móviles -->
+    <meta name="theme-color" content="#1e7bbf">
+
+</head>
+
+<body>
+    <header>
+        <h1>Imágenes en la web</h1>
+        <hr />
+    </header>
+    <nav>
+      <a href="servivios/servicios.html">Enlace a servicios</a>
+    </nav>
+    <main>
+      <h2>Ejemplo de imagen en el mismo directorio</h2>
+      <img src="relleno1.gif" alt="Imagen de prueba">
+      <hr>
+      <h2>Ejemplo de imagen desde directorio img</h2>
+      <img src="./img/relleno2.gif" alt="Imagen de prueba">
+      <h2>Ejemplo de imagenes desde otra pagina web</h2>
+      <img loading="lazy" src="https://picsum.photos/seed/xx/800/300" alt="Imagen de prueba">
+      <img loading="lazy" src="https://picsum.photos/seed/xxx/800/300" alt="Imagen de prueba">
+      <img loading="lazy" src="https://picsum.photos/seed/xxxx/800/300" alt="Imagen de prueba">
+      <h2>Ejemplos con figure y figcaption</h2>
+      <figure>
+        <figcaption>Esta imagen es de prueba</figcaption>
+        <img loading="lazy" src="https://picsum.photos/id/237/200/300" alt="Imagen de prueba">
+      </figure>
+      <h2>Ejemplo segun el tamaño de la imagen</h2>
+      <p>tienes que reducir el tamaño del navegador y veras una imagen u otra</p>
+      <picture>
+        <source media="(min-width:650px)" srcset="https://picsum.photos/seed/xk/800/300">
+        <source media="(min-width:465px)" srcset="https://picsum.photos/seed/xxx/450/300">
+        <img src="https://picsum.photos/seed/xk/800/300" alt="Imagen de prueba" style="width: auto;">
+      </picture>
+
+
+    </main>
+    <footer>
+        © 2023 - Todos los derechos reservados
+    </footer>
+</body>
+
+</html>

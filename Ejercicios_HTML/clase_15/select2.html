@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+
+    <!-- Título para el navegador y los buscadores -->
+    <title>Clase 15</title>
+
+    <!-- Descripción de la página para los buscadores -->
+    <meta name="description" content="Página de ejemplos vistos en clase">
+
+    <!-- Palabras clave para los buscadores -->
+    <meta name="keywords" content="p, h1, h2, h3, h4, h5">
+
+    <!-- Autor de la página -->
+    <meta name="author" content="@jonascampos">
+
+    <!-- Favicon de la página -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Codificación-->
+    <meta charset="UTF-8">
+
+    <!-- Para que la web sea responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Para algunos navegadores móviles -->
+    <meta name="theme-color" content="#1e7bbf">
+
+    <!--Enlaces a JavaScript para el Select2-->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    
+    <!--Enlaces de jQuery-->
+    <script src="https://code.jquery.com/jquery-2.2.4.js" 
+     integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+     crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Clase 15 Etiquetas interacctivas</h1>
+        <p><a href="index.html">👈 Volver atrás</a></p>
+        <hr />
+    </header>
+    <main>
+        
+        <h2>Ejemplo de Select2</h2>
+        <p>Selecciona tu lenguaje favorito
+        <select name="" id="lenguajes">
+            <option value="">--</option>
+            <option value="1">Phyton</option>
+            <option value="2">Css</option>
+            <option value="3">JavaScript</option>
+        </select>
+        </p>
+    
+    </main>
+    <hr>
+    <footer>
+        
+        
+        © 2025 - Todos los derechos reservados
+    </footer>
+    <script>
+        $(document).ready(function() {
+    $('lenguajes').select2();
+});
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+*{
+    color: red;
+}
+h1{
+    color: blue;
+}
+
+p{
+    color: pink;
+}
+
+.destacado{
+    color: green;
+}
+
+.grande{
+    font-size: 5rem;
+}
+
+#main{
+    color: aqua;
+}
+
+.destacado.grande{
+    border: 1px solid rebeccapurple;
+}
+
+a.enlace{
+    font-size: 1.5rem;
+    background-color: chartreuse;
+    
+}
+
+a#google{
+    font-size: 2rem;
+    background-color: blue;
+   
+
+}
+
+.lista#pepe{
+    font-size:1.25rem ;
+    background: orange;
+    color:black
+}
+
+*[href]{
+    color: black ;
+}
+*[href="#"]{
+    background-color: cornflowerblue;
+}
+
+li[datalist~="happy"]{
+    background: black;
+}
+
+*[lang|=es]{
+    color: maroon;
+}
+
+[data^="pera"]{
+    background: black;
+    color:white
+
+}
+
+[data*="naranja"]{
+    background:yellow;
+    color:black;
+
+}
+    
+
+[data$="coco"]{
+    background:greenyellow;
+    color:blue;
+
+}
+
+hr{
+    background-color:black;
+    height: 5px;
+}
+    

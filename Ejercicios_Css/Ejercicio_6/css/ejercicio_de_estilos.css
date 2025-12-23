@@ -1,0 +1,28 @@
+/*1*/
+div>div{}
+/*2*/
+p>*{}
+/*3*/
+article>p{}
+/*4*/
+article p{}
+/*5*/
+h1 , h3{}
+/*6*/
+body ol{}
+/*7*/
+.amarillo{}
+/*8*/
+body>ul{}
+/*9*/
+p>a{}
+/*10*/
+#platano{}
+/*11*/
+h2~div{}
+/*12*/
+ul p.paisa{}
+/*13*/
+header > h1.headertitle 
+header > h2.headertitle 
+header > h3.headertitle{}

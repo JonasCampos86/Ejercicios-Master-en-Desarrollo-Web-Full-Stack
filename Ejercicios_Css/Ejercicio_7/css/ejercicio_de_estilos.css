@@ -1,0 +1,21 @@
+/*1*/
+p a:first-child{}
+/*2*/
+form> input[type="checkbox"]:checked{}
+/*3*/
+article> p:last-of-type{} /*Error en el > va sin el  */
+/*4*/
+section :nth-child(2){}  /*Error en el > va con el */
+/*5*/
+ol :nth-child(even){}   /*Error en el > va con el */
+/*6*/
+ul li:nth-last-of-type(3){} /*Error en el > va con el */
+/*7*/
+p> a:nth-of-type(2){}
+/*8*/
+button:only-child{}
+/*9*/
+p> span:first-child{}
+/*10*/
+body> :nth-last-child(2){}
+

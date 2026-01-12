@@ -1,0 +1,20 @@
+ /* selector descendente */
+ul#listado li{
+    background-color: crimson;
+}
+/* selector de hijo  */
+ol>li{
+    background-color: aquamarine;
+}
+/* Selector de hermanos */
+th~th{
+    background-color: darkgreen;
+}
+/* Selector de hermanos adyacentes */
+div>p + p{
+    background-color: blueviolet;
+}
+/* Selector multiple*/
+strong , em, code , pre{
+    color: lawngreen;
+}

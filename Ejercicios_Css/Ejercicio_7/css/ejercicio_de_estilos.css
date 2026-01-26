@@ -1,5 +1,5 @@
 /*1*/
-p a:first-child{}
+p > a:first-child{}
 /*2*/
 form> input[type="checkbox"]:checked{}
 /*3*/

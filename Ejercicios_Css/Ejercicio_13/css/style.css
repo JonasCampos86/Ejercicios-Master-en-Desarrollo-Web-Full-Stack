@@ -1,0 +1,131 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?ro9li8');
+  src:  url('../fonts/icomoon.eot?ro9li8#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?ro9li8') format('truetype'),
+    url('../fonts/icomoon.woff?ro9li8') format('woff'),
+    url('../fonts/icomoon.svg?ro9li8#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-user:before {
+  content: "\e971";
+}
+.icon-exit:before {
+  content: "\ea14";
+}
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-youtube2:before {
+  content: "\ea9e";
+}
+
+
+
+
+
+nav.flaticon img{
+    width: 20px;
+}
+h1{
+    font-family: fantasy;
+    color: darkcyan;
+    font-weight: lighter;
+}
+
+nav.google a:visited, nav.google a{
+    color: greenyellow;
+}
+
+nav.google a:hover{
+    color:purple ;
+}
+
+nav.fontawesome a:visited{
+    color: lightskyblue;
+}
+nav.fontawesome a:hover{
+    color: blueviolet;
+}
+
+ul.menu a{
+    text-decoration: none;
+}
+
+@font-face {
+  font-family: 'icomoon-custom';
+  src:  url('../fonts/icomoon-custom.eot?6cxuz1');
+  src:  url('../fonts/icomoon-custom.eot?6cxuz1#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon-custom.ttf?6cxuz1') format('truetype'),
+    url('../fonts/icomoon-custom.woff?6cxuz1') format('woff'),
+    url('../fonts/icomoon-custom.svg?6cxuz1#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="iconcustom-"], [class*=" iconcustom-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon-custom' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconcustom-Slice-7:before {
+  content: "\e900";
+}
+.iconcustom-Slice-6:before {
+  content: "\e901";
+}
+.iconcustom-Slice-5:before {
+  content: "\e902";
+}
+.iconcustom-Slice-4:before {
+  content: "\e903";
+}
+.iconcustom-Slice-3:before {
+  content: "\e904";
+}
+.iconcustom-Slice-2:before {
+  content: "\e905";
+}
+
+ul.custom a:visited{
+    color: deeppink;
+   
+}
+
+ul.custom a{
+    text-decoration: none;
+}
+ul.custom a:hover{
+    color: black;
+}

@@ -1,0 +1,105 @@
+div.caja1ejercicio1{
+    box-sizing:border-box;
+    width: 250px;
+    height: 200px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: red;
+    padding: 10px;
+    margin: 25px;
+    background-color: #d3d3d3;
+}
+
+div.caja2ejercicio1{
+    color:white;
+    box-sizing: border-box;
+    width: 300px;
+    height: 200px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: green;
+    background-color: grey;
+    padding: 5px;
+    margin: 0px;
+}
+
+div.contenedor{
+    border-width: 5px;
+    border-style: solid;
+    border-color:red;
+}
+
+div.caja1ejercicio2{
+    width: 50%;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:green;
+    
+}
+
+div.caja2ejercicio2{
+    width: 50%;
+    margin-top: 10px;
+    margin-left: 50px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:blue;
+    
+    
+
+}
+
+div.caja3ejercicio2{
+    width: 50%;
+    margin-top: 10px;
+    margin-left: 100px;
+    margin-bottom: 50px;
+    border-width: 5px;
+    border-style: solid;
+    border-color:orange;
+    
+
+}
+div.caja1ejercicio3{
+    border: 5px solid red;
+    padding: 0px;
+    margin-bottom: 10px;
+
+}
+div.caja2ejercicio3{
+    border: 5px solid blue;
+    padding: 25px;
+    margin-bottom: 10px;
+
+}
+div.caja3ejercicio3{
+    border: 5px solid green;
+   padding: 50px;
+}
+
+div.caja1ejercicio4{
+    text-align: center;
+    padding: 20px;
+    border-top: 5px dotted green;
+    border-left: 5px dashed blue;
+    border-bottom: 5px dotted red;
+    border-right:5px dashed orange;
+    margin: 10px;
+}
+div.caja2ejercicio4{
+    text-align: center;
+    padding: 20px;
+    border-top: 5px solid rgb(0, 187, 255);
+    border-left: 10px solid black;
+    border-bottom: 5px solid pink;
+    border-right: 10px solid black;
+    margin: 10px;
+}
+div.caja3ejercicio4{
+    margin: 5px;
+    text-align: center;
+    padding: 15px;
+    border:3px solid black
+}

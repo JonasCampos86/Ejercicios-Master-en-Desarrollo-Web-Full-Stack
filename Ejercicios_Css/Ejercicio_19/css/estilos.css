@@ -1,0 +1,397 @@
+header.container1{
+    border: 1px solid greenyellow;
+    background-color: rgb(232, 225, 225);
+    width: 600px;
+    height: 500px;
+}
+
+.container1 .rojo{
+    font-size: x-large;
+    background-color: red;
+    width: 250px;
+    height: 50px;
+    margin: 10px;
+}
+.container1 .azul{
+    font-size: x-large;
+    background-color:blue;
+    width: 250px;
+    height: 50px;
+    margin: 10px;
+    position: relative;
+    top:370px;
+    left: 330px; 
+
+}
+.container1 .verde{
+    font-size: x-large;
+    background-color:green;
+    width: 250px;
+    height: 100px;
+    margin: 10px;
+    position: relative;
+    top:260px;
+    
+}
+
+.container1 .amarillo{
+    font-size: x-large;
+    background-color:yellow;
+    width: 250px;
+    height: 100px;
+    margin: 10px;
+    position: relative;
+    bottom: 230px;
+    left: 330px; 
+}
+
+header.container2{
+    border: 1px solid greenyellow;
+    background-color: rgb(232, 225, 225);
+    width: 600px;
+    height: 500px;
+}
+.container2 .rojo{
+    font-size: x-large;
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}    
+.container2 .azul{
+    font-size: x-large;
+    background-color:blue;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top:300px;
+    left: 500px; 
+
+}
+
+.container2 .verde{
+    font-size: x-large;
+    background-color:green;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top:200px;
+}
+
+.container2 .amarillo{
+    font-size: x-large;
+    background-color:yellow;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    bottom: 300px;
+    left: 500px; 
+}
+
+header.container3{
+    border: 1px solid greenyellow;
+    background-color: rgb(232, 225, 225);
+    width: 600px;
+    height: 500px;
+}
+
+.container3 .azul{
+    font-size: x-large;
+    background-color:blue;
+    width: 300px;
+    height: 250px;
+    position: relative;
+    margin: 10px;
+    left: 100px; 
+    z-index: 1;
+}
+
+.container3 .verde{
+    font-size: x-large;
+    background-color:green;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    bottom: 100px;
+    left: 50px;
+    z-index: 2;
+}
+.container3 .amarillo{
+    font-size: x-large;
+    background-color:yellow;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    bottom: 400px;
+    left: 300px; 
+    z-index: 3;
+}
+.container3 .rojo{
+    font-size: x-large;
+    background-color: red;
+    width: 300px;
+    height: 125px;
+    position: relative;
+    z-index: 4;
+    bottom: 450px;
+    left: 200px;
+}    
+
+.container4{
+    font-size: 0%;
+}
+
+header.container4{
+    border: 1px solid greenyellow;
+    background-color: rgb(232, 225, 225);
+    width: 600px;
+    height: 500px;
+}
+
+.container4 .verde{
+    font-size: xx-large;
+    background-color:green;
+    width: 120px;
+    height: 400px;
+    position: relative;
+    display: inline-block;
+    top: 50px;
+    left: 50px;
+    vertical-align: 0%;
+}
+.container4 .amarillo{
+    font-size: xx-large;
+    background-color:yellow;
+    width: 120px;
+    height: 400px;
+    position: relative;
+    display: inline-block;
+    top: 50px;
+    left: 50px;
+    margin: 0px;
+    vertical-align: 0%;
+}
+.container4 .rojo{
+    font-size: xx-large;
+    background-color:red;
+    width: 120px;
+    height: 400px;
+    position: relative;
+    display: inline-block;
+    top: 50px;
+    left: 50px;
+    margin: 0px;
+    vertical-align: 0%;
+}
+
+.container4 .azul{
+    font-size: xx-large;
+    background-color:blue;
+    width: 120px;
+    height: 400px;
+    position: relative;
+    display: inline-block;
+    top: 50px;
+    left: 50px;
+    margin: 0px;
+    vertical-align: 0%;
+}
+
+header.container5{
+    border: 1px solid greenyellow;
+    background-color: rgb(232, 225, 225);
+    width: 600px;
+    height: 500px;
+}
+.container5 .amarillo{
+    font-size: xx-large;
+    background-color:yellow;
+    width: 500px;
+    height: 100px;
+    position: absolute;
+    top: 400px;
+    left: 60px;
+    z-index: 1;
+}
+.container5 .rojo{
+    font-size: xx-large;
+    background-color:red;
+    width: 500px;
+    height: 100px;
+    position: absolute;
+    top: 100px;
+    left: 60px;
+    z-index: 2;
+}
+.container5 .azul{
+    font-size: xx-large;
+    background-color:blue;
+    width: 120px;
+    height: 450px;
+    position: absolute;
+    top: 75px;
+    left: 150px;
+    z-index: 3;
+}
+
+.container5 .verde{
+    font-size: xx-large;
+    background-color:green;
+    width: 120px;
+    height: 450px;
+    position: absolute;
+    top: 75px;
+    left: 375px;
+    z-index: 4;
+}
+
+.container6{
+    font-size: 40px;
+    width: 600px;
+    height: 500px;
+}
+
+.container6 .uno{
+    font-size: medium;
+    width: 18%;
+    height: 100%;
+    border: 1px solid black;
+    display: inline-block;
+
+}
+.container6 .dos{
+    font-size: medium;
+    width: 18%;
+    height: 100%;
+    border: 1px solid black;
+    display: inline-block;
+
+}
+.container6 .tres{
+    font-size: medium;
+    width: 18%;
+    height: 100%;
+    border: 1px solid black;
+    display: inline-block;
+
+}
+.container6 .cuatro{
+    font-size: medium;
+    width: 18%;
+    height: 100%;
+    border: 1px solid black;
+    display: inline-block;
+
+}
+
+
+header.container7{
+    border: 1px solid black;
+    width: 800px;
+}
+
+div.titulo{
+    border: 1px solid black;
+    margin-top :15px;
+    margin-left :15px;
+    width: 760px;
+    height: 50px;
+}
+.titulo p{
+   text-indent: 15px;
+}
+header main{
+    border: 1px solid black;
+    margin-top :15px;
+    margin-left :15px;
+    width: 760px;
+    height: 400px;
+    text-indent: 15px;
+}
+
+body footer.ej7{
+    border: 1px solid black;
+    margin-top:15px;
+    margin-left :15px;
+    width: 760px;
+    height: 50px;
+    text-indent: 15px;
+    margin-bottom: 15px;
+}
+
+header.container8{
+    border: 2px solid black;
+}
+
+div.header{
+    border: 2px solid black;
+    margin:10px;
+    height: 30px;
+    font-size: small;
+    text-indent: 5px;
+}
+
+div.sidebar{
+    border: 2px solid black;
+    margin:10px;
+    width: 250px;
+    height: 500px;
+    font-size: small;
+    text-indent: 5px;
+}
+
+div.main{
+    border: 2px solid black;
+    margin:10px;
+    width: 480px;
+    height: 380px;
+    font-size: small;
+    text-indent: 5px;
+    position: absolute;
+    bottom: 100px;
+    left: 280px;
+}
+
+div.footer{
+    border: 2px solid black;
+    margin:10px;
+    height: 40px;
+    font-size: small;
+    text-indent: 5px;
+}
+
+header.container9{
+    border: 2px solid black;
+    width: 400px;
+    height: 115px;
+}
+div.logo{
+    margin:5px;
+    border: 2px solid black;
+    width: 160px;
+    height:50px ;
+    font-size: small;
+    text-indent: 5px;
+}
+div.top{
+    margin:5px;
+    border: 2px solid black;
+    width: 90px;
+    height:15px ;
+    font-size: small;
+    text-indent: 5px;
+    position: relative;
+    left: 295px;
+    bottom: 60px;
+}
+div.menu{
+    margin:5px;
+    border: 2px solid black;
+    width: 250px;
+    height:15px ;
+    font-size: small;
+    text-indent: 5px;
+    position: relative;
+    left: 135px;
+    bottom:0px;
+}
+

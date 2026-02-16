@@ -1,0 +1,124 @@
+header{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header h1{
+    background-color: black;
+    color: white;
+    padding:30px 20px ;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+header nav{
+    background-color:#ccc ;
+
+}
+header nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+header nav ul li a{
+    padding: 10px 20px;
+    display: block;
+}
+header li a{
+    color: black;
+    text-decoration: none;
+}
+header li a:hover{
+    color: white;
+    background: black;
+}
+.ejercicio2 nav ul{
+    display: flex;
+    justify-content: center;
+}
+.ejercicio3 nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+.ejercicio4 nav ul{
+    display: flex;
+    flex-direction: column;
+    
+}
+.ejercicio4 nav{
+    width: 25%;
+}
+.ejercicio5 h1{
+    font-size: 25px;
+    padding: 2px;
+    text-indent: 20px;
+    margin-bottom: 20px;
+}
+.ejercicio5 section{
+    background-color:#ccc ;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.ejercicio5 section img{
+    max-width: 77px;
+    border: 1px dashed white;
+}
+.ejercicio6 h1{
+    font-size: 25px;
+    padding: 2px;
+    text-indent: 20px;
+    margin-bottom: 20px;
+}
+.ejercicio6 section{
+    background-color:#ccc ;
+    display:flex;
+   padding: 10px;
+   gap: 10px;
+}
+.ejercicio6 section img{
+    max-width:77px;
+    border: 1px dashed white;
+    
+}
+.ejercicio7 h1{
+    font-weight:lighter;
+    
+    padding: 10px;
+    text-align: right;
+}
+
+.travelContainer{
+    display: flex;
+    
+}
+
+article.travel1{
+    background-color: cadetblue;
+    width: 33.33%;
+}
+
+article.travel2{
+    background-color:rgb(127, 255, 170);
+    width: 33.33%;
+}
+article.travel3{
+    background-color:mediumslateblue;
+    width: 33.33%;
+}
+
+img.travel__img{
+    max-width: 95%;
+    margin: 10px;
+    
+}
+
+h2.travel__title{
+    text-align: center;
+    font-size: 20px;
+}
+p.travel__text{
+    text-align: justify;
+    margin: 5px;
+}
+
+

@@ -1,0 +1,81 @@
+div.container1{
+    display: grid;
+    width: 750px;
+    height: 200px;
+    gap:10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container1 div{
+    color: white;
+    background-color: blueviolet;
+    font-size: 50px;
+    text-align: center;
+}
+div.container2{
+    display: grid;
+    width: 150px;
+    height: 200px;
+    gap:5px;
+    grid-template-columns: 50px 100px;
+    grid-template-rows: 50px 100px 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container2 div{
+    color: white;
+    background-color:rgb(0, 128, 83);
+    font-size: 30px;
+    text-align: center;
+}
+div.container3{
+    display: grid;
+   
+    gap:5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3,100px);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
+}
+.container3 div{
+    color: white;
+    background-color:rgb(213, 146, 212);
+    width: 300px;
+    height: 100px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    font-size: 40px;
+    
+}
+div.container4{
+    display: grid;
+    width: 700px;
+    height: 200px;
+    
+    grid-template-areas: 
+        "head head head head"
+        "main main . sidebar"
+        "foot foot foot foot"
+                         ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   
+}
+.container4 div{
+    border: 1px solid black;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+}
+.head{
+    background-color: red;
+}
+.main{
+    background-color: aquamarine;
+}
+.sidebar{
+    background-color: cadetblue;
+}
+.foot{
+    background-color: dimgrey;
+}

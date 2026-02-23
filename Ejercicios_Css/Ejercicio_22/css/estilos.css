@@ -1,0 +1,191 @@
+div.maincontainer{
+    border: 2px solid red;
+    color: white;
+    min-height: 180px;
+    width: 350px;
+
+}
+
+
+
+.maincontainer.ejercicio1 div{
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: 14px;
+}
+
+div div:nth-of-type(1){
+    background-color: cadetblue;
+    
+}
+
+div div:nth-of-type(2){
+     background-color: blue;
+    
+}
+div div:nth-of-type(3){
+     background-color: purple;
+    
+}
+
+div div:nth-of-type(4){
+     background-color: black;
+    
+}
+
+div div:nth-of-type(5){
+     background-color: gold;
+    
+}
+
+div div:nth-of-type(6){
+     background-color: orange;
+   
+}
+
+div div:nth-of-type(7){
+     background-color: orangered;
+    
+}
+
+div div:nth-of-type(8){
+     background-color: grey;
+    
+}
+
+div div:nth-of-type(9){
+     background-color: rgb(47, 255, 47);
+    
+}
+
+div div:nth-of-type(10){
+     background-color: cadetblue;
+    
+}
+
+/*ejercicio 1*/
+.maincontainer.ejercicio1{
+    display: flex;
+}
+/*ejercicio 2*/
+.maincontainer.ejercicio2{
+     display: flex;
+     flex-direction: column-reverse;
+}
+.maincontainer.ejercicio2 div{
+     text-align: center;
+}
+
+/*ejercicio 3*/
+.maincontainer.ejercicio3{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: flex-start;
+}
+.maincontainer.ejercicio3 div{
+     text-align: center;
+     width: 33.33%;
+}
+/*ejercicio 4*/
+.maincontainer.ejercicio4{
+     display: flex;
+     flex-wrap: nowrap;
+     align-items: flex-start;
+     min-height: 18px;
+}
+.maincontainer.ejercicio4 div{
+     text-align: center;
+     flex: 1;
+}
+.maincontainer.ejercicio4 div:nth-of-type(5){
+     order: -1;
+}
+.maincontainer.ejercicio4 div:nth-of-type(6){
+     order: 1;
+}
+
+/*ejercicio5 */
+.maincontainer.ejercicio5{
+     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    
+}
+.maincontainer.ejercicio5 div{
+     text-align: center;
+     font-size: 4px;
+}
+/*ejercicio6 */
+.maincontainer.ejercicio6{
+     display: flex;
+    justify-content: start;
+   align-items:baseline;
+}
+.maincontainer.ejercicio6 div{
+   
+    height: 25%;
+}
+.maincontainer.ejercicio6 div:nth-of-type(1){
+     font-size: 10px;
+}
+.maincontainer.ejercicio6 div:nth-of-type(2){
+     font-size: 20px;
+}
+.maincontainer.ejercicio6 div:nth-of-type(3){
+     font-size: 30px;
+}
+.maincontainer.ejercicio6 div:nth-of-type(4){
+     font-size: 40px;
+}
+.maincontainer.ejercicio6 div:nth-of-type(5){
+     font-size: 10px;
+}
+.maincontainer.ejercicio6 div:nth-of-type(6){
+     font-size: 20px;
+}
+.maincontainer.ejercicio6 div:nth-of-type(7){
+     font-size: 20px;
+}
+.maincontainer.ejercicio6 div:nth-of-type(8){
+     font-size: 20px;
+}
+.maincontainer.ejercicio6 div:nth-of-type(9){
+     font-size: 20px;
+}
+.maincontainer.ejercicio6 div:nth-of-type(10){
+     font-size: 18px;
+}
+/*ejercicio7 */
+.maincontainer.ejercicio7{
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: center;
+     align-content: center;
+}
+.maincontainer.ejercicio7 div{
+    width: 33.33%;
+    text-align: center;
+    
+}
+/*ejercicio8 */
+.maincontainer.ejercicio8{
+     display: flex;
+     flex-wrap: wrap; 
+     align-items: start;
+}
+.maincontainer.ejercicio8 div{
+   width: 10%;
+   text-align: center;
+}
+.maincontainer.ejercicio8 div:nth-of-type(2){
+     align-self: stretch;
+}
+.maincontainer.ejercicio8 div:nth-of-type(6){
+     align-self: center;
+}
+.maincontainer.ejercicio8 div:nth-of-type(9){
+     align-self: end;
+     padding-bottom: 8px;
+}

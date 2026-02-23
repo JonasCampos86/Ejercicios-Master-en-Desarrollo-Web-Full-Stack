@@ -1,0 +1,181 @@
+body{
+   
+    background-image:url(../img/topography.svg), linear-gradient(90deg, rgba(253, 29, 29, 1) 0%, rgba(107, 29, 253, 1) 100%) ;
+    padding: 30px;
+}
+header{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,200px);
+    grid-template-areas: "foto foto precio1"
+                         "foto foto precio2";
+    gap: 20px;
+}
+
+.cartel1,.cartel2{
+    background-color: #FFC600;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    align-content: center;
+    padding: 20px;
+}
+.foto{
+    grid-area: foto;
+    position: relative;
+    background-image: url(../img/taco.jpg);
+    background-size: cover; 
+    display: flex;
+    align-items: start;
+    padding: 50px;
+    justify-content: center;
+    flex-direction: column;
+}
+.foto h1{
+    background-color:#FCC600;
+    width: max-content;
+    padding: 5px;
+    font-weight: bold;
+}
+.foto p{
+    background-color:#FCC600;
+    width: max-content;
+    padding: 5px;
+    font-weight: bold;
+}
+.foto h1:hover, .foto p:hover{
+    background-color: black;
+    color: #FCC600;
+}
+
+.cartel1{
+    grid-area: precio1;
+    
+}
+.cartel2{
+    grid-area:precio2;
+}
+.cartel1:hover , .cartel2:hover{
+    background-color: black;
+    color: #FCC600;
+}
+.price{
+    font-size: 60px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+.name{
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+}
+
+nav{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+nav  ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    gap: 10px;
+    text-align: center;
+}
+nav  ul li a{
+    display: block;
+    background-color: #FCC600;
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+    font-weight: bold;
+}
+nav  ul li a:hover{
+    background-color: black;
+    color: #FCC600;
+}
+
+nav ul li{
+    flex: 1;
+}
+
+.destacados{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+  
+}
+.destacados article{
+    background-color: white;
+    text-align: center;
+}
+.destacados article:hover{
+    background-color: #FCC600;
+}
+.destacados .icono{
+    font-size: 50px;
+    margin: 0;
+    margin-bottom: -10px;
+}
+.destacados .gris{
+    font-size: 14px;
+    color: darkgrey;
+    font-weight:900;
+    padding-bottom: 5px;
+}
+
+.tacazo{
+    display: flex;
+    background-color: white;
+    margin-top: 20px;
+    padding: 50px;
+    justify-content: start;
+    align-items: center;
+    font-weight: bolder;
+   
+}
+.tacazo a{
+    background-color: #FCC600;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: lighter;
+    font-size: 12px;
+}
+.tacazo a:hover{
+    background-color: black;
+    color: #FCC600;
+}
+
+.insta h3{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 10px;
+}
+.insta h3:after{
+    content: "";
+    display: block;
+    background-image:linear-gradient(to left,transparent,#ffc600);
+    height: 10px;
+}
+.insta h3:before{
+    content: "";
+    display: block;
+     background-image:linear-gradient(to right,transparent,#ffc600);
+    height: 10px;
+}
+
+.insta div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,minmax(200px ,1fr));
+    gap: 5px;
+}
+

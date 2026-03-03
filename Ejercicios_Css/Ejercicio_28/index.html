@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>CSS Clase 27 Ejercicios de posicionamiento de tablas</title>
+  <title>CSS Clase 28 Ejercicios de menu desplegable</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -20,15 +20,21 @@
 <body>
 
   <header>
-    <h1>CSS Clase 27 Ejercicios de posicionamiento de Tablas</h1>
+    <h1>CSS Clase 28 Ejercicios de menu desplegable</h1>
     <h2>Ejercicios propuestos</h2>
-    <nav>
+    <img src="./img/ejercicio1.png" alt="">
+    <hr>
+    <nav class="menu">
       <ul>
-        <li><a href="ejercicio1.html">Ejercicio 1</a></li>
-        <li><a href="ejercicio2.html">Ejercicio 2</a></li>
-        <li><a href="ejercicio3.html">Ejercicio 3</a></li>
-        <li><a href="ejercicio4.html">Ejercicio 4</a></li>
-        <li><a href="ejercicio5.html">Ejercicio 5</a></li>
+       <li><a href="#">Home</a></li>
+       <li><a href="#">Our services</a>
+        <ul class="desplegable">
+          <li><a href="#">Marketing</a></li>
+          <li><a href="#">Social Media</a></li>
+          <li><a href="#">Web Desing</a></li>
+        </ul>
+       </li>
+       <li><a href="#">Contact us</a></li>
 
       </ul>
     </nav>

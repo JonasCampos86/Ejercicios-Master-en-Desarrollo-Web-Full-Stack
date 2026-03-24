@@ -1,0 +1,147 @@
+/*
+Aqui empieza mi proyecto
+*/
+
+:root{
+    --color-blue:#515DEF;
+    --color-white:#FBFBFB;
+    --color-black:#333333;
+    --color-grey:#909090;
+    --fuente:"Montserrat", sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-blue);
+    font-family: var(--fuente);
+    background-image: url("../img/smiling-creative-business-team-discussing-over-lap-566JQTQ\ 1@2x.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    
+    
+
+}
+.page{
+    
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    
+}
+
+header.head{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 148px;
+}
+
+nav.menu{
+    width: 100%;
+}
+
+nav.menu ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    
+}
+
+nav.menu ul li{
+    display: flex;
+    align-items: center;
+}
+
+nav.menu a{
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: 12px;
+}
+
+nav.menu a:hover{
+    text-decoration: underline;
+}
+
+nav.menu ul li:last-child{
+    margin-left: auto;
+    
+
+}
+nav.menu ul li:last-child a{
+    display: inline-block;
+    padding:10px 15px;
+    background-color: var(--color-blue);
+}
+
+nav.menu ul li:last-child a:hover{
+    color: var(--color-blue);
+    background-color: var(--color-white);
+}
+
+
+.hero{
+    color: var(--color-white);
+    margin-left: 40px;
+    max-width: 40%;
+}
+
+.hero p{
+    font-size: 14px;
+    max-width: 95%;
+}
+
+.hero .boton2{
+    margin-top: 40px;
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-black);
+    background-color: var(--color-white); 
+}
+
+
+
+.boton2 a{
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--color-black);
+    padding: 15px 15px;
+}
+.boton2 a:hover{
+    text-decoration: underline;
+}
+
+.productos{
+    display: flex;
+    background-color: var(--color-white);
+    margin-top: 40px; 
+    max-width: 75%;
+    transform:translateX(-50px) ;
+}
+
+.productos article{
+    padding-top: 40px;
+    padding-left: 60px;
+    width: 480px;
+}
+
+.productos article img{
+    width: 50px;
+    height: 50px;
+}
+
+.productos h4{
+    font-size: 12px;
+}
+
+.productos p{
+    font-size: 10px;
+    color: var(--color-grey);
+    width: 200px;
+}
+

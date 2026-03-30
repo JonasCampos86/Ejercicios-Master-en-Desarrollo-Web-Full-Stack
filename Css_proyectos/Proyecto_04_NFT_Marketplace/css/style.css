@@ -414,88 +414,88 @@ body {
   margin-bottom: 0;
   order: -2;
 }
-.heros .hero2 .targeta {
+.heros .hero2 .tarjeta {
   background-color: #FFFFFF;
   font-family: "Poppins", sans-serif;
   padding: 1.5rem;
   margin-top: -4.1rem;
 }
-.heros .hero2 .targeta p {
+.heros .hero2 .tarjeta p {
   color: #8E8E8E;
 }
-.heros .hero2 .targeta h4 {
+.heros .hero2 .tarjeta h4 {
   color: #2E2F38;
 }
-.heros .hero2 .targeta .header {
+.heros .hero2 .tarjeta .header {
   border-bottom: 1px solid black;
   padding-bottom: 1rem;
 }
-.heros .hero2 .targeta .info1 {
+.heros .hero2 .tarjeta .info1 {
   display: flex;
   justify-content: start;
 }
-.heros .hero2 .targeta .info1 img {
+.heros .hero2 .tarjeta .info1 img {
   width: 50px;
   height: 50px;
   margin-right: 1rem;
 }
-.heros .hero2 .targeta .info1 .datos1 {
+.heros .hero2 .tarjeta .info1 .datos1 {
   margin-right: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.heros .hero2 .targeta .info1 .datos1 .username {
+.heros .hero2 .tarjeta .info1 .datos1 .username {
   font-size: 0.8rem;
 }
-.heros .hero2 .targeta .info1 .datos1 .name {
+.heros .hero2 .tarjeta .info1 .datos1 .name {
   color: black;
   font-size: 1.2rem;
   font-weight: 600;
 }
-.heros .hero2 .targeta .info1 .datos2 {
+.heros .hero2 .tarjeta .info1 .datos2 {
   margin-left: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.heros .hero2 .targeta .info1 .datos2 .precio {
+.heros .hero2 .tarjeta .info1 .datos2 .precio {
   font-size: 0.8rem;
 }
-.heros .hero2 .targeta .info1 .datos2 .moneda {
+.heros .hero2 .tarjeta .info1 .datos2 .moneda {
   color: black;
   font-size: 1.2rem;
   font-weight: 600;
 }
-.heros .hero2 .targeta .nav2 {
+.heros .hero2 .tarjeta .nav2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 1rem;
   font-size: 0.8rem;
 }
-.heros .hero2 .targeta .nav2 .boton {
+.heros .hero2 .tarjeta .nav2 .boton {
   display: inline-block;
   background-color: #FA504D;
   padding: 8px 30px;
   color: #FFFFFF;
 }
-.heros .hero2 .targeta .nav2 .botonhover {
+.heros .hero2 .tarjeta .nav2 .botonhover {
   background-color: #FA504D, 0.2;
 }
-.heros .hero2 .targeta .nav2 .boton {
+.heros .hero2 .tarjeta .nav2 .boton {
   text-decoration: none;
 }
-.heros .hero2 .targeta .nav2 .boton2 {
+.heros .hero2 .tarjeta .nav2 .boton2 {
   display: inline-block;
   background-color: #FA504D;
   padding: 8px 30px;
   color: #FFFFFF;
 }
-.heros .hero2 .targeta .nav2 .boton2hover {
+.heros .hero2 .tarjeta .nav2 .boton2hover {
   background-color: #FA504D, 0.2;
 }
-.heros .hero2 .targeta .nav2 .boton2 {
+.heros .hero2 .tarjeta .nav2 .boton2 {
   background-color: #FFFFFF;
   color: #FA504D;
   text-decoration: none;

@@ -1,0 +1,43 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins'    as m;
+
+
+.footer{
+    
+    height:120px ;
+    background-color: v.$azul-oscuro;
+    
+    
+    
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 2.2rem;
+        
+        
+        img{
+            width: 89px;
+            height: 35px;
+        
+        }
+
+        .nav-principal{
+            a{
+                @include m.btn-gradiant($bgi:v.$gradient-azul-rosa,$bgih:v.$gradient-azul-rosa-hover);
+                @include m.breakpoint(desktop-xl){
+                    @include m.btn-gradiant-large()
+
+                }
+                
+                
+            }
+            ul{
+            @include m.reset-list();
+        }
+
+        }
+
+    }
+}

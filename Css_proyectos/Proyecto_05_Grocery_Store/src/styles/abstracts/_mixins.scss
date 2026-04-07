@@ -1,0 +1,42 @@
+@use 'variables' as v;
+
+// ============================
+// MIXIN BREAKPOINTS
+// Uso: @include m.breakpoint(tablet) { ... }
+// ============================
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (min-width: v.$bp-mobile)     { @content; }
+  } @else if $breakpoint == tablet {
+    @media (min-width: v.$bp-tablet)     { @content; }
+  } @else if $breakpoint == desktop {
+    @media (min-width: v.$bp-desktop)    { @content; }
+  } @else if $breakpoint == desktop-xl {
+    @media (min-width: v.$bp-desktop-xl) { @content; }
+  } @else {
+    @warn "Breakpoint '#{$breakpoint}' no definido. Usa: mobile, tablet, desktop, desktop-xl";
+  }
+}
+
+
+// ============================
+// MIXIN BOTONS
+// Uso: @include m.btn
+// ============================
+
+@mixin btn(){
+  display: inline-block;
+  padding: 1.2rem 3rem;
+  background-color: v.$color-terciary;
+  color: white;
+  text-decoration: none;
+  border-radius: 16px;
+  font-family: v.$font-secondary;
+  font-size: v.$font-size-small;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: v.$color-primary;
+    color: white;
+  }
+}

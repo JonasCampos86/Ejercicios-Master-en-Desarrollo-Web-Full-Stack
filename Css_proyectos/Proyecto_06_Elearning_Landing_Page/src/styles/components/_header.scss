@@ -1,0 +1,42 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins'    as m;
+
+
+.header-principal{
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-family: v.$jakarta-font;
+    
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img{
+            width: 89px;
+            height: 35px;
+        }
+        
+        .nav-principal{
+            a{
+                @include m.btn($bg:v.$azul-oscuro,$bgh:#666CA3 );
+                @include m.breakpoint(desktop-xl){
+                    @include m.btn-gradiant-large()
+
+                }
+                
+                
+            }
+            ul{
+            @include m.reset-list();
+        }
+
+        }
+    }
+    
+}
+
+
+
+
+

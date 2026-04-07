@@ -1,0 +1,22 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins'    as m;
+
+
+.informacion{
+    display: flex;
+    font-family: v.$font-secondary;
+
+    h2{
+        color: v.$color-secondary;
+        font-size: v.$font-size-medium;
+        font-weight: 500;
+        
+    }
+
+    p{
+        color: v.$color-primary;
+        font-size: v.$font-size-small;
+        max-width: 80%;
+    }
+   
+}

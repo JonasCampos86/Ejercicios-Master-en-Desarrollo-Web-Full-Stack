@@ -1,0 +1,51 @@
+// ============================
+// ABSTRACTS
+// ============================
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins'    as m;
+
+// ============================
+// COMPONENTS
+// ============================
+@use "components/header" as hd;
+@use "components/hero" as hr;
+@use "components/footer" as ft;
+
+
+// ============================
+// BASE
+// ============================
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+ 
+  @include m.breakpoint(mobile) {
+    font-size: 14px;
+  }
+  @include m.breakpoint(tablet) {
+    font-size: 16px;
+  }
+  @include m.breakpoint(desktop) {
+    font-size: 18px;
+  }
+  @include m.breakpoint(desktop-xl) {
+    font-size: 20px;
+  }
+}
+
+// ============================
+// Aquí empieza tu proyecto ⬇
+// ============================
+
+.container{
+  width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 160px;
+  padding-right: 160px
+    
+}

@@ -1,0 +1,79 @@
+@use 'variables' as v;
+
+// ============================
+// MIXIN BREAKPOINTS
+// Uso: @include m.breakpoint(tablet) { ... }
+// ============================
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (min-width: v.$bp-mobile)     { @content; }
+  } @else if $breakpoint == tablet {
+    @media (min-width: v.$bp-tablet)     { @content; }
+  } @else if $breakpoint == desktop {
+    @media (min-width: v.$bp-desktop)    { @content; }
+  } @else if $breakpoint == desktop-xl {
+    @media (min-width: v.$bp-desktop-xl) { @content; }
+  } @else {
+    @warn "Breakpoint '#{$breakpoint}' no definido. Usa: mobile, tablet, desktop, desktop-xl";
+  }
+}
+
+
+// ============================
+// MIXIN BOTONS
+// Uso: @include m.btn
+// ============================
+
+@mixin btn($bg:blue,$c:white,$bgh:blue,){
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: $bg;
+  color: $c;
+  text-decoration: none;
+  border-radius: 28px;
+  transition: all 0.3s ease;
+  font-weight: 700;
+
+  &:hover {
+    background-color:$bgh;
+    color: white;
+  }
+}
+
+@mixin reset-list(){
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin btn-gradiant($bgi:blue,$c:white,$bgih){
+  display: inline-block;
+  padding: 0.8rem 1.5rem; 
+  background-image: $bgi;
+  color: $c;
+  text-decoration: none;
+  border-radius: 28px;
+  transition: all 0.3s ease;
+  font-weight: 700;
+
+  &:hover {
+    background-image:$bgih ;
+    color: white;
+  }
+}
+
+@mixin btn-gradiant-large($bgi:blue,$c:white,$bgih:blue){
+  display: inline-block;
+  padding: 1rem 2rem; 
+  background-image: $bgi;
+  color: $c;
+  text-decoration: none;
+  border-radius: 28px;
+  transition: all 0.3s ease;
+  font-weight: 700;
+
+  &:hover {
+    background-image: $bgih;
+    color: white;
+  }
+}

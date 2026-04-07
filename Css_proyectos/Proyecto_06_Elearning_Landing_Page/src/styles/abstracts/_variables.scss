@@ -1,0 +1,46 @@
+// ============================
+// BREAKPOINTS
+// ============================
+$bp-mobile:     480px;
+$bp-tablet:     768px;
+$bp-desktop:    1024px;
+$bp-desktop-xl: 1440px;
+
+// ============================
+// COLORES // Recuerda poner el nombre del color,
+//            así será más fácil 
+// ============================
+$azul-claro:   #666CA3;
+$azul-oscuro: #13183F;
+$gris:  #83869A;
+$rosa-fuerte:  #F74780;
+$rosa-claro: #FFA7C3;
+$gradient-naranja-rosa: linear-gradient(180deg, #FF6F48 0.04%, #F02AA6 100%);
+$gradient-azul-rosa: linear-gradient(180deg, #4851FF 0%, #F02AA6 99.92%);
+$gradient-naranja-rosa-hover: 
+      linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0.5) 100%
+      ),
+      linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%)
+    ;
+$gradient-azul-rosa-hover:linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0.5) 100%
+      ),
+      linear-gradient(180deg, #4851ff -54.32%, #f02aa6 100%) ;
+
+
+// ============================
+// FUENTES
+// ============================
+
+$jakarta-font: "Plus Jakarta Sans", sans-serif; 
+
+
+
+// ============================
+// TAMAÑO-FUENTES
+// ============================

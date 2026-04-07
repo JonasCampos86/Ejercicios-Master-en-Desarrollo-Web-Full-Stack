@@ -1,0 +1,101 @@
+// ============================
+// ABSTRACTS
+// ============================
+@use 'abstracts/variables' as v;
+@use 'abstracts/mixins'    as m;
+
+
+// ============================
+// COMPONENTS
+// ============================
+@use "components/header" as hd;
+@use "components/hero" as hr;
+@use "components/footer" as ft;
+@use "components/information" as if;
+
+
+// ============================
+// BASE
+// ============================
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: v.$jakarta-font;
+  
+  
+
+  @include m.breakpoint(mobile) {
+    font-size: 14px;
+  }
+  @include m.breakpoint(tablet) {
+    font-size: 16px;
+  }
+  @include m.breakpoint(desktop) {
+    font-size: 18px;
+  }
+  @include m.breakpoint(desktop-xl) {
+    font-size: 20px;
+  }
+}
+
+// ============================
+// Aquí empieza tu proyecto ⬇
+// ============================
+
+
+// ============================
+// Recomendaciones para hacerlo lo mejor posible:
+// .container{
+//    width: 1920px;
+//    margin-left: auto;
+//    margin-right: auto;
+//    padding-left: 160px;
+//    padding-right: 160px
+//  } 
+//   Y mucha paciencia Jonás, que eres capaz de muchas cosas, solo cree en TI
+// ============================
+
+
+body{
+  font-size: 16px;
+  @include m.breakpoint(tablet){
+    
+    background-image:url("/public/img/hero-img.png") ;
+    background-repeat: no-repeat;
+    background-size: 55%;
+    background-position: top -15px right -85px;
+
+  }
+  @include m.breakpoint(desktop-xl) {
+    
+    background-size: 40%;
+    background-position: top  right -8px;
+    
+
+  }
+
+
+  
+}
+.container{
+  padding-left: 16px;
+  padding-right: 16px;
+  @include m.breakpoint(tablet){
+    padding-top: 24px;
+    padding-left: 39px;
+    padding-right: 39px;
+  
+  }
+  @include m.breakpoint(desktop-xl) {
+    padding-top:  2.5rem;
+    padding-left: 10.2rem;
+    padding-right: 10.2rem;
+  
+
+  }
+
+}

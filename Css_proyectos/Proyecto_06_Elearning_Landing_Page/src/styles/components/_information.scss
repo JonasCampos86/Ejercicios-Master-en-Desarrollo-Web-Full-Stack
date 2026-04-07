@@ -1,0 +1,138 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins'    as m;
+
+.information{
+    padding-bottom: 5rem;
+    background-image:linear-gradient(180deg, #FFFFFF 0%, #F0F1FF 100%);
+    
+
+.container{
+
+     @include m.breakpoint(tablet) {
+        padding-top:5rem ;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap:0.6rem
+
+    }
+     @include m.breakpoint(desktop-xl) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap:2rem;
+        
+        padding-top: 10rem;
+    
+
+    }
+
+}
+
+
+}
+
+
+
+
+.head__information{
+    display: flex;
+    background-image: v.$gradient-naranja-rosa;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    width: 100%;
+    height: 120px;
+    align-items:center ;
+    
+    @include m.breakpoint(tablet) {
+        height: 100%;
+
+    }
+    
+
+
+    
+
+    h2.head__title{
+        margin: 24px 28px 32px 28px;
+        @include m.breakpoint(desktop-xl) {
+        font-size: 2rem;
+
+    }
+
+    }
+}
+
+.info__item{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    padding-left: 1.4rem;
+    padding-right: 1.7rem;
+    background-color: white;
+    border-radius: 10px;
+    
+    
+    
+    
+    
+   
+    
+    .info__img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: v.$gradient-naranja-rosa;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        margin-top: -28px;
+        
+    }
+
+    .info__item-title{
+        margin-top: 1.2rem;
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: v.$azul-oscuro;
+        @include m.breakpoint(desktop-xl){
+            font-size: 24px;
+        }
+
+    }
+
+    .info__item-description{
+        margin-top: 1rem;
+        font-size: 1rem;
+        font-weight: 500;
+        color: v.$gris;
+        @include m.breakpoint(desktop-xl){
+            font-size: 18px;
+            line-height: 28px;
+        }
+
+
+    }
+    .info__item-cta{
+        margin-top: 1.2rem;
+        margin-bottom: 1.5rem;
+        @include m.breakpoint(desktop-xl){
+            
+        }
+
+    }
+    .button-link{
+        text-decoration: none;
+        color: v.$rosa-fuerte;
+        font-size: 1.1rem;
+        font-weight: 700;
+        
+        
+
+    }
+    a:hover{
+            color: v.$rosa-claro;
+        }
+
+}
+
+

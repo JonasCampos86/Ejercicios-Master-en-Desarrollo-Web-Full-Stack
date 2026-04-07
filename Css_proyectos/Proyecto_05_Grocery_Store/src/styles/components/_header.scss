@@ -1,0 +1,79 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins'    as m;
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 46px;
+    padding-bottom: 46px;
+    align-items: center;
+
+    ul{
+        display: flex;
+        list-style: none;
+        gap:56px;
+    }
+    a{
+        text-decoration: none;
+        color: v.$color-primary;
+        font-size: v.$font-size-small;
+        font-family: v.$font-secondary;
+        font-weight: 400;
+
+    }
+    .subrayado{
+        color:v.$color-terciary;
+        position: relative;
+        display: inline-block;
+       &::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom:  -8px;
+            left: 5px;
+            width: 75%;
+            height: 2px;
+            background-color: v.$color-terciary;
+        } 
+    }
+
+    .login{
+        display: flex;
+        position: relative;
+        align-items: center;
+
+        .boton_blanco{
+            @include m.btn();
+                background-color: white;
+                color: v.$color-terciary;
+                text-decoration: underline;
+                
+        }
+
+        .boton_naranja{
+            @include m.btn();
+
+        }
+        a:first-child{
+            position: relative;
+            display: inline-block;
+            
+
+            &::after{
+                content: "";
+                position: absolute;
+                
+                
+               
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: v.$color-terciary;
+                
+            } 
+
+        }
+    }
+
+    
+}

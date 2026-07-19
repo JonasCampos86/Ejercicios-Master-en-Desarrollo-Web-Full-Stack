@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios de selectores en JavaScript</title>
+  </head>
+  <body>
+    <main>
+    <h1 id="titulo-curso">Curso de JavaScript</h1>
+
+     <!-- EJERCICIO 1-->
+
+    <section>
+        <h2>Estado del curso</h2>
+
+        <p id="estado-curso">
+            Practicando selectores del DOM
+        </p>
+
+        <p>
+            Este párrafo no tiene identificador.
+        </p>
+    </section>
+
+    <!-- EJERCICIO 2-->
+
+    <section>
+        <h2>Avisos del curso</h2>
+
+        <p class="aviso">Entrega del ejercicio el lunes.</p>
+
+        <div class="aviso">
+            Revisa la consola antes de entregar.
+        </div>
+
+        <p>Este párrafo no es un aviso.</p>
+
+        <span class="aviso">Clase disponible en el campus.</span>
+    </section>
+
+    <!-- EJERCICIO 3-->
+
+    <section>
+        <h2>Temario del curso</h2>
+
+        <ul>
+            <li>Variables</li>
+            <li>Funciones</li>
+            <li>Arrays</li>
+            <li>DOM</li>
+        </ul>
+
+        <p>Contenido actualizado.</p>
+    </section>
+
+    <!-- EJERCICIO 4-->
+
+    <section>
+        <h2>Preferencias del alumno</h2>
+
+        <p name="preferencia">Estudiar JavaScript</p>
+
+        <div name="preferencia">
+            Practicar ejercicios del DOM
+        </div>
+
+        <input
+            type="text"
+            name="usuario"
+            value="Jonás"
+        >
+
+        <span name="preferencia">Crear proyectos propios</span>
+    </section>
+
+     <!-- EJERCICIO 5-->
+
+    <section>
+        <h2>Tareas pendientes</h2>
+
+        <p class="tarea">Repasar los selectores.</p>
+        <p>Descansar diez minutos.</p>
+        <p class="tarea">Completar los ejercicios.</p>
+        <p class="tarea">Subir el código a GitHub.</p>
+    </section>
+
+    <!-- EJERCICIO 6 -->
+
+    <section>
+        <h2>Módulos del curso</h2>
+
+        <p class="modulo">HTML</p>
+        <p class="modulo">CSS</p>
+        <p>Descanso</p>
+        <div class="modulo">JavaScript</div>
+        <span class="modulo">DOM</span>
+    </section>
+    </main>
+
+    <!-- EJERCICIO 7 -->
+
+    <main>
+        <p>Información general del curso.</p>
+
+        <section class="teoria">
+            <h2>Teoría</h2>
+            <p>El DOM representa el documento HTML.</p>
+        </section>
+
+        <section class="practica">
+            <h2>Práctica</h2>
+
+            <p>Seleccionar elementos correctamente.</p>
+
+            <div>
+                <p>Comprobar qué devuelve cada selector.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- EJERCICIO 8 -->
+
+    <section>
+        <h2>Acciones del formulario</h2>
+
+        <button type="button">Mostrar ayuda</button>
+        <button type="submit">Enviar formulario</button>
+        <button type="button">Limpiar campos</button>
+
+        <a href="#">Volver al inicio</a>
+
+        <button type="button">Guardar borrador</button>
+    </section>
+
+    <!-- EJERCICIO 9 -->
+
+    <nav>
+        <h2>Recursos del curso</h2>
+
+        <a href="./apuntes.html">Apuntes</a>
+
+        <a href="https://developer.mozilla.org" target="_blank">
+            Documentación de JavaScript
+        </a>
+
+        <a href="./ejercicios.html">Ejercicios</a>
+
+        <a href="https://github.com" target="_blank">
+            GitHub
+        </a>
+
+        <button type="button" target="_blank">
+            Botón que no debe seleccionarse
+        </button>
+    </nav>
+
+     <!-- EJERCICIO 10 -->
+
+    <main>
+        <section class="frontend">
+            <h2>Frontend</h2>
+
+            <p class="recurso">Guía de HTML</p>
+            <p>Descanso recomendado</p>
+            <p class="recurso">Manual de CSS</p>
+
+            <div>
+                <p class="recurso">Documentación de JavaScript</p>
+            </div>
+        </section>
+
+        <section class="backend">
+            <h2>Backend</h2>
+
+            <p class="recurso">Introducción a Python</p>
+            <p class="recurso">Bases de datos</p>
+        </section>
+    </main>
+        <!-- EJERCICIO 11 -->
+
+        <main>
+        <section class="html">
+            <h2>HTML</h2>
+
+            <p class="tema">Etiquetas semánticas</p>
+            <p class="tema">Formularios</p>
+        </section>
+
+        <section class="javascript">
+            <h2>JavaScript</h2>
+
+            <p class="tema">Variables</p>
+            <p>Descanso</p>
+            <p class="tema">Arrays</p>
+
+            <div>
+                <p class="tema">DOM</p>
+            </div>
+        </section>
+        </main>
+
+          <!-- EJERCICIO 12 -->
+
+            <section>
+                <h2>Cursos disponibles</h2>
+
+                <p class="curso">JavaScript básico</p>
+                <div class="curso">Python avanzado</div>
+                <p class="curso">JavaScript DOM</p>
+                <span class="curso">CSS moderno</span>
+                <p class="curso">JavaScript orientado a objetos</p>
+            </section>
+
+    <!-- EJERCICIO 13 -->
+     <!-- <main>
+        <section class="javascript">
+            <h2>Recursos de JavaScript</h2>
+
+            <a class="recurso" href="./variables.html">
+                Variables
+            </a>
+
+            <a
+                class="recurso"
+                href="https://developer.mozilla.org"
+                target="_blank"
+            >
+                MDN JavaScript
+            </a>
+
+            <button class="recurso" target="_blank">
+                Botón de ayuda
+            </button>
+
+            <div>
+                <a
+                    class="recurso"
+                    href="https://javascript.info"
+                    target="_blank"
+                >
+                    JavaScript.info
+                </a>
+            </div>
+        </section>
+
+        <section class="python">
+            <h2>Recursos de Python</h2>
+
+            <a
+                class="recurso"
+                href="https://docs.python.org"
+                target="_blank"
+            >
+                Documentación de Python
+            </a>
+        </section>
+    </main> -->
+
+    <!-- EJERCICIO 14 -->
+    <!-- <main>
+        <section class="javascript">
+            <h2>Recursos de JavaScript</h2>
+
+            <a class="recurso" href="./variables.html">
+                Variables
+            </a>
+
+            <a
+                class="recurso"
+                href="https://developer.mozilla.org/dom"
+                target="_blank"
+            >
+                DOM: selección de elementos
+            </a>
+
+            <a
+                class="recurso"
+                href="https://javascript.info/events"
+                target="_blank"
+            >
+                Eventos de JavaScript
+            </a>
+
+            <button class="recurso" target="_blank">
+                DOM: botón de ayuda
+            </button>
+
+            <div>
+                <a
+                    class="recurso"
+                    href="https://developer.mozilla.org/collections"
+                    target="_blank"
+                >
+                    DOM: colecciones
+                </a>
+            </div>
+
+            <a class="recurso" href="./dom-local.html">
+                DOM: apuntes locales
+            </a>
+        </section>
+
+        <section class="css">
+            <h2>Recursos de CSS</h2>
+
+            <a
+                class="recurso"
+                href="https://example.com"
+                target="_blank"
+            >
+                DOM visual con CSS
+            </a>
+        </section>
+    </main> -->
+
+    <!-- EJERCICIO 15 -->
+<main>
+    <section class="javascript">
+        <h2>Recursos de JavaScript</h2>
+
+        <a class="recurso" href="./variables.html">
+            Variables básicas
+        </a>
+
+        <a
+            class="recurso"
+            href="https://developer.mozilla.org/dom"
+            target="_blank"
+        >
+            DOM: selectores
+        </a>
+
+        <a
+            class="recurso"
+            href="https://javascript.info/array-methods"
+            target="_blank"
+        >
+            Arrays: métodos
+        </a>
+
+        <a href="https://example.com/dom" target="_blank">
+            DOM: recurso sin clase
+        </a>
+
+        <button class="recurso" target="_blank">
+            DOM: botón de ayuda
+        </button>
+
+        <div>
+            <a
+                class="recurso"
+                href="https://example.com/events"
+                target="_blank"
+            >
+                Eventos de JavaScript
+            </a>
+        </div>
+    </section>
+
+    <section class="python">
+        <h2>Recursos de Python</h2>
+
+        <a
+            class="recurso"
+            href="https://docs.python.org"
+            target="_blank"
+        >
+            Arrays en Python
+        </a>
+    </section>
+</main>
+   
+
+    <script src="selectores.js"></script>
+    
+  </body>

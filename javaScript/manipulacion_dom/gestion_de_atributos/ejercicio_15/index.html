@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 15 — Reto final: gestión completa de atributos</title>
+  </head>
+  <body>
+<main>
+    <h1>Biblioteca de recursos</h1>
+
+    <label for="resumen">Estado de la revisión</label>
+
+    <input
+        id="resumen"
+        type="text"
+        value="Pendiente de revisión"
+    >
+
+    <section id="biblioteca">
+        <article
+            class="recurso sin-revisar"
+            data-estado="activo"
+            data-tipo="video"
+            data-prioridad="alta"
+            style="padding: 10px;"
+        >
+            <h2>Introducción al DOM</h2>
+
+            <p class="aviso" hidden>
+                Este recurso no está disponible.
+            </p>
+
+            <button class="boton-acceso">
+                Abrir recurso
+            </button>
+        </article>
+
+        <article
+            class="recurso sin-revisar"
+            data-estado="inactivo"
+            data-tipo="articulo"
+            data-prioridad="normal"
+            style="padding: 10px;"
+        >
+            <h2>Atributos HTML</h2>
+
+            <p class="aviso" hidden>
+                Este recurso no está disponible.
+            </p>
+
+            <button class="boton-acceso">
+                Abrir recurso
+            </button>
+        </article>
+
+        <article
+            class="recurso sin-revisar"
+            data-estado="activo"
+            data-tipo="articulo"
+            data-prioridad="normal"
+            style="padding: 10px;"
+        >
+            <h2>Creación de elementos</h2>
+
+            <p class="aviso" hidden>
+                Este recurso no está disponible.
+            </p>
+
+            <button class="boton-acceso">
+                Abrir recurso
+            </button>
+        </article>
+    </section>
+</main>
+  </body>
+  <script src="ejercicio15.js"></script>
+</html>

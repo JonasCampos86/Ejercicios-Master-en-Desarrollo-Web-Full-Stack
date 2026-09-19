@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios de eventos 3</title>
+  </head>
+  <body>
+    <h1>Ejercicio 3</h1>
+    <hr />
+    <p><a href="/ejercicios_de_eventos/index.html">Atras</a></p>
+    <hr />
+
+    <main>
+      <p>
+        Escribe un programa que permita ordenar los elementos de una lista
+        desordenada. Cada elemento debe tener un aspa en su extremo derecho para
+        poder ser eliminado. Además, al final habrá un botón para añadir un
+        elemento. El texto del nuevo elemento se le debe pedir al usuario por
+        teclado.
+      </p>
+      <h5>Crea y modifica tu lista</h5>
+      <ul id="list">
+        <li>Agua</li>
+        <li>Luz</li>
+        <li>Gas</li>
+        <li>Mareomotriz</li>
+        <li>Geotermica</li>
+        <li>Eolica</li>
+      </ul>
+      <hr />
+      <button id="sort">Ordenar</button>
+      <hr />
+      <button id="newElement">Crear un nuevo elemento</button>
+    </main>
+
+    <script>
+      const elementos = document.getElementsByTagName("li");
+      const lista = document.getElementById("list");
+      const nuevoElemento = document.getElementById("newElement");
+      const botonOrdenar = document.getElementById("sort");
+
+      nuevoElemento.addEventListener("click", () => {
+        const textoUsuario = prompt("Escriba el nombre del nuevo elemento: ");
+        if (textoUsuario === null) {
+          alert("Has cancelado la operación");
+        } else if (textoUsuario === "") {
+          alert("No has escrito nada y le diste a aceptar");
+        } else {
+          const newLi = document.createElement("li");
+          newLi.textContent = textoUsuario;
+          newLi.append(crearBotonEliminar());
+          lista.append(newLi);
+        }
+      });
+
+      botonOrdenar.addEventListener("click", ordenar);
+
+      function crearBotonEliminar() {
+        const eliminar = document.createElement("button");
+        eliminar.classList.add("eliminar");
+        eliminar.textContent = "X";
+        eliminar.addEventListener("click", (evento) => {
+          const padre = evento.target.parentElement;
+          padre.remove();
+        });
+        return eliminar;
+      }
+
+      function ordenar() {
+        const elementosSinOrden = Array.from(elementos);
+        const elementosConOrden = elementosSinOrden.sort((a, b) =>
+          a.childNodes[0].textContent
+            .toLowerCase()
+            .localeCompare(b.childNodes[0].textContent.toLowerCase()),
+        );
+
+        for (const elemento1 of elementosConOrden) {
+          lista.append(elemento1);
+        }
+        return elementosConOrden;
+      }
+
+      for (const elemento of elementos) {
+        elemento.append(crearBotonEliminar());
+      }
+    </script>
+
+    <style></style>
+  </body>
+</html>

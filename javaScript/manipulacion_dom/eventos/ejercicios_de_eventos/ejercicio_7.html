@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios de eventos 7</title>
+  </head>
+  <body id="elBody">
+    <h1>Ejercicio 7</h1>
+    <hr />
+    <p><a href="/index.html">Atras</a></p>
+    <hr />
+      <p>
+        Escribe un programa para simular la velocidad de pulsación de dos teclas. 
+        En pantalla aparecerán dos cajas, una verde y otra roja, una debajo de otra. 
+        El alto de cada caja será de 40 px y el ancho inicial de 10 px cada una. 
+        La primera caja incrementará su ancho 5px cada vez que se pulse la tecla [a]. 
+        La segunda caja hará lo mismo cuando se pulse la tecla [ñ]. 
+        El juego termina cuando una de las cajas llega a 500 px de ancho. 
+        En ese momento deben desactivarse los eventos de ambas teclas y 
+        mostrarse un mensaje bajo las cajas que ponga «GANA VERDE» • «GANA ROJO». 
+        Se trata de calcular con qué mano eres capaz de realizar más pulsaciones.
+      </p>
+      <hr>
+    <main>
+      <p>Pusla la tecla A para que la barra verde crezca</p>
+      <div id="teclaA"></div>
+      <hr>
+      <hr>
+      <p>Pusla la tecla Ñ para que la barra roja crezca</p>
+      <div id="teclaÑ"></div>
+      <p id="ganaA" hidden>GANA EL VERDE</p>
+      <p id="ganaÑ" hidden>GANA EL ROJO</p>
+    </main>
+
+    <script>
+      const teclaA = document.getElementById("teclaA");
+      const teclaÑ = document.getElementById("teclaÑ");
+      const ganaA = document.getElementById("ganaA");
+      const ganaÑ = document.getElementById("ganaÑ");
+      const elBody = document.getElementById("elBody");
+      let anchoA = 10;
+      let anchoÑ = 10;
+
+      function pulsacion (event){
+      const tecla = event.key;
+
+        if (tecla === "a"){
+          anchoA += 5;
+          teclaA.style = `width:${anchoA}px`;
+          if(anchoA >= 500){
+            ganaA.hidden = false;
+            elBody.removeEventListener("keyup", pulsacion);
+          }
+        } 
+        if (tecla ==="ñ"){
+          anchoÑ += 5;
+          teclaÑ.style = `width:${anchoÑ}px`;
+          if(anchoÑ >= 500){
+            ganaÑ.hidden = false;
+            elBody.removeEventListener("keyup", pulsacion);
+          }
+          
+        }
+
+      }
+
+      elBody.addEventListener("keyup", pulsacion);
+
+
+
+    </script>
+
+    <style>
+      #teclaA{
+        width: 10px;
+        height: 40px;
+        background-color:green;
+      }
+
+      #teclaÑ{
+        width: 10px;
+        height: 40px;
+        background-color:red;
+      }
+
+    </style>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios de eventos 1</title>
+  </head>
+  <body>
+    <h1>Ejercicio 1</h1>
+    <hr>
+    <p><a href="/ejercicios_de_eventos/index.html">Atras</a></p>
+    <hr>
+    <p>
+      Crea una página HTML con un contenedor de una imagen. Debes tener preparadas 
+      diez imágenes y en función de la tecla numérica que se pulse (0, 1, 2, 3, 4, 5, 6, 7, 8, 9) 
+      debe aparecer esa imagen en el contenedor. Cuando se pulse otro número, 
+      debe vaciarse el contenedor y cargarse de nuevo su imagen correspondiente.
+    </p>
+  <main>
+    <div class="contenedorImg">
+      <figure>
+        <img  id="imgCambiante" src="https://picsum.photos/300/250?r=1" alt="">
+      </figure>
+    </div>
+  </main>
+  <script>
+     let imgUrl = [
+      `https://picsum.photos/300/250?r=1`,
+      `https://picsum.photos/300/250?r=2`,
+      `https://picsum.photos/300/250?r=3`,
+      `https://picsum.photos/300/250?r=4`,
+      `https://picsum.photos/300/250?r=5`,
+      `https://picsum.photos/300/250?r=6`,
+      `https://picsum.photos/300/250?r=7`,
+      `https://picsum.photos/300/250?r=8`,
+      `https://picsum.photos/300/250?r=9`,
+      `https://picsum.photos/300/250?r=10`
+     ];
+     let imgCambiante = document.getElementById("imgCambiante");
+     document.body.addEventListener(
+      "keydown",
+      (event)=>{
+        let tecla = parseInt(event.key);
+        if(tecla >= 0 && techa <= 9){
+          imgCambiante.setAttribute("src", imgUrl[tecla])
+        }else{
+          alert("No has pulsado un boton apropiado")
+        }
+
+      }
+     )
+  </script>
+  </body>
+</html>

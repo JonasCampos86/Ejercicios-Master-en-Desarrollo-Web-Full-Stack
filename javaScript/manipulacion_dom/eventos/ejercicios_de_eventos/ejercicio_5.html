@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios de eventos 5</title>
+  </head>
+  <body >
+    <h1>Ejercicio 5</h1>
+    <hr />
+    <p><a href="/index.html">Atras</a></p>
+    <hr />
+      <p>
+      Crea una rutina que no permita que el ratón se 
+      coloque encima de una caja azul de 100 x 100 px. 
+      Cada vez que el ratón intente colocarse encima, 
+      la posición de la caja debe cambiar 
+      aleatoriamente por la página
+      </p>
+
+    <main id="limitacion">
+     <div id="cajita">Pincha si puedes</div>
+    </main>
+
+    <script>
+        const cajita = document.getElementById("cajita");
+
+        function obtenerAleatorio(min,max){
+            return Math.floor(Math.random()*(max - min )) + min
+        }
+
+        cajita.addEventListener("mouseover",()=>{
+            const horizontal = window.innerWidth - 100;
+            const vertical = window.innerHeight -100;
+            
+            const ramdLeft = Math.floor(Math.random()*horizontal);
+            const ramdtop = Math.floor(Math.random()*vertical);
+
+            cajita.style.top = `${ramdtop}px`;
+            cajita.style.left = `${ramdLeft}px`
+        })
+
+
+    </script>
+
+    <style>
+      #cajita{
+      width: 100px;
+      height: 100px;
+      background-color:blue;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      
+    }
+
+    #limitacion{
+      width: 1270px;
+      height: 600px;
+    }
+    </style>
+  </body>
+</html>

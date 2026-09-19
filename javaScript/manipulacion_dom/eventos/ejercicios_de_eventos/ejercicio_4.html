@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios de eventos 4</title>
+  </head>
+  <body id="elBody">
+    <h1>Ejercicio 4</h1>
+    <hr />
+    <p><a href="/ejercicios_de_eventos/index.html">Atras</a></p>
+    <hr />
+      <p>
+        Elabora un programa que vaya rellenando un párrafo de forma dinámica 
+        con todas las letras que vaya pulsando el usuario sobre cualquier 
+        elemento de la página. Al final del párrafo debes incluir un botón para 
+        limpiar el contenido del párrafo.
+      </p>
+
+    <main>
+      <p id="elParrafo">
+      <button id="borrado">Borrar</button> 
+     </p>
+
+    </main>
+
+    <script>
+      const elBody = document.getElementById("elBody");
+      const elParrafo = document.getElementById("elParrafo");
+      const elBorrador = document.getElementById("borrado");
+      elBody.addEventListener(
+        "keydown",
+        (event)=>{
+          elBorrador.before(event.key)
+        }
+      )
+      elBorrador.addEventListener(
+        "click",
+        ()=>{
+          const nodos = Array.from(elParrafo.childNodes);
+          for( const nodo of nodos){
+            if(nodo !== elBorrador){
+              nodo.remove();
+            }
+          }
+        }
+      )
+
+    </script>
+
+    <style></style>
+  </body>
+</html>

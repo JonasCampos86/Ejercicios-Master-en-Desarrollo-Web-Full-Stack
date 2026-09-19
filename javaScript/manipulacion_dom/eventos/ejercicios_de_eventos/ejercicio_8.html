@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios de eventos 2</title>
+    <style>
+      #tablero{
+        background-color:white;
+        display: grid;
+        place-items: center;
+        grid-template-rows: repeat(4,1fr);
+        grid-template-columns: repeat(4,1fr);
+        width: 300px;
+        height: 300px;
+      }
+
+      .casilla{
+        height: 50px;
+        width: 50px;
+        background-color: black;
+        border: 3px solid white;
+      }
+    
+
+    
+    </style>
+  </head>
+  <body>
+    <h1>Ejercicio 8</h1>
+    <hr>
+    <p><a href="/index.html">Atras</a></p>
+    <hr>
+
+
+  <main>
+  <p>
+    Juguemos a adivinar las parejas. Debes distribuir en la página una 
+    cuadrícula de 6 x 5 cajas. De las 30 cajas habrá 15 distintas. 
+    Cada par de cajas será de un color distinto. Inicialmente todas las cajas 
+    aparecerán negras. Cuando el usuario pinche sobre una caja, se revelará su 
+    auténtico color. En ese momento debes arrastrar la caja al lugar donde 
+    creas que se encuentra su pareja. Si aciertas, ambas cajas permanecerán 
+    boca arriba y ya no se podrá interactuar con ellas. Si fallas, las dos 
+    cajas volverán a su estado inicial. El programa debe detectar cuándo 
+    están todas las cajas emparejadas y cuánto tiempo has tardado en resolverlo.
+  </p>
+  </main>
+  <hr>
+  <h2><span id="timer">00:00:00</span></h2>
+  
+  <hr>
+  <div id="tablero"></div>
+  <hr>
+  <p id="mensaje" hidden> TERMINASTE </p>
+
+
+  <script>
+    const filas = 4;
+    const columnas = 4;
+    const cuadrosTotales = filas * columnas;
+    const tablero = document.getElementById("tablero");
+    const mensaje = document.getElementById("mensaje");
+    const colores =[  
+      "#FF0000", // Rojo
+      "#00CC33", // Verde
+      "#0044FF", // Azul
+      "#FFFF00", // Amarillo
+      "#FF8800", // Naranja
+      "#CC00FF", // Violeta
+      "#00FFFF", // Cian
+      "#8B4513", // Marrón
+    ]
+    const losColoresPareja = shuffle([...colores,...colores]);
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+    
+    let sumaCasillas = 0;
+    let color1 = "";
+    let color2 = "";
+    let casillaElegida1 = "";
+    let casillaElegida2 = "";
+    
+    for(let cuadrado = 0; cuadrado < cuadrosTotales; cuadrado++){
+      const casilla = document.createElement("div");
+      casilla.setAttribute("class","casilla");
+      casilla.setAttribute("data-color",losColoresPareja[cuadrado]);
+      casilla.setAttribute("data-open","0");
+      tablero.append(casilla);
+      
+      casilla.addEventListener("click",(event)=>{
+        
+        if(sumaCasillas === 2){
+          return
+        }
+        const fondo = event.target.dataset.color;
+        casilla.style = `background-color:${fondo}`;
+        if (sumaCasillas === 0){
+          if(casilla.dataset.open === "0"){
+            
+            casilla.dataset.open = "1";
+            casillaElegida1 = casilla;
+            sumaCasillas += 1;
+            color1 = fondo;
+          }
+        }
+
+        if (sumaCasillas === 1){
+          if(casilla.dataset.open === "0"){
+              casilla.dataset.open = "1";
+              casillaElegida2 = casilla;
+              sumaCasillas += 1;
+              color2 = fondo;
+          }
+        }
+
+        if(sumaCasillas === 2){
+          if (color1 != color2){
+            setTimeout(()=>{
+              sumaCasillas = 0;
+              casillaElegida1.dataset.open = "0";
+              casillaElegida2.dataset.open = "0";
+              
+              casillaElegida1.style = `background-color: black`;
+              casillaElegida2.style = `background-color: black`;
+            },500)
+
+          }else{
+            sumaCasillas = 0;
+            let abiertos = document.querySelectorAll(`[data-open="1"]`)
+            if (abiertos.length === cuadrosTotales){
+              mensaje.hidden = false;
+              stopwatch.stop()
+            }
+          }
+        }   
+      });
+    }
+    var min,sec,ms,count, malt, salt, msalt;
+
+var stopwatch = {
+  start: function(){
+    
+    ms = 0;
+    sec = 0;
+    min = 0;
+    count = setInterval(function(){
+      if(ms == 100){
+        ms = 0;
+        if(sec == 60){
+          sec = 0;
+          min++;
+        }
+        else{
+          sec++;
+        }
+      }
+      else{
+        ms++;
+      }
+      
+      malt = stopwatch.pad(min);
+      salt = stopwatch.pad(sec);
+      msalt = stopwatch.pad(ms);
+      
+      stopwatch.update(malt + ":" + salt + ":" + msalt);
+    }, 10);
+    },
+  stop: function(){
+    clearInterval(count);
+ 
+  },
+  
+  update: function(txt){
+     var temp = document.getElementById("timer");
+  temp.firstChild.nodeValue = txt;
+  },
+  
+  pad: function(time){
+    var temp;
+    if(time < 10){
+      temp = "0" + time;
+    }
+    else{
+      temp = time;
+    }
+    return temp;
+  }
+}
+stopwatch .start();
+    
+    
+  </script>
+
+
+  </body>
+</html>

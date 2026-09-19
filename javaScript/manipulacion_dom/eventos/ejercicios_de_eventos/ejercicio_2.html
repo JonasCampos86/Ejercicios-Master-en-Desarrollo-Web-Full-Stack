@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios de eventos 2</title>
+  </head>
+  <body>
+    <h1>Ejercicio 2</h1>
+    <hr>
+    <p><a href="/ejercicios_de_eventos/index.html">Atras</a></p>
+    <hr>
+
+
+  <main>
+  <p>
+    Crea una aplicación cuyo código HTML contenga únicamente una caja roja. 
+    Cada vez que el usuario pulse algunas de las teclas de los 
+    cursores (flecha arriba, flecha abajo, flecha a derecha, flecha a izquierda) 
+    la caja debe desplazarse 10 px en la dirección establecida por el cursor
+  </p>
+  </main>
+<p id="cajaRoja">CAJA</p>
+
+  <script>
+    const caja = document.getElementById("cajaRoja");
+    let vertical = 250;
+    let horizontal = 500;
+    document.body.addEventListener(
+      "keydown",
+      (evento)=>{
+       
+       let tecla = evento.key;
+        if (tecla === "ArrowUp"){
+          vertical-=10;
+          caja.style =`transform: translate( ${horizontal}px ,${vertical}px)`;
+        }else if(tecla === "ArrowDown"){
+          vertical+=10;
+          caja.style =`transform: translate( ${horizontal}px ,${vertical}px)`;
+        }else if(tecla === "ArrowRight"){
+          horizontal+=10;
+          caja.style =`transform: translate( ${horizontal}px ,${vertical}px)`;
+        }else if(tecla === "ArrowLeft"){
+          horizontal-=10;
+          caja.style =`transform: translate( ${horizontal}px ,${vertical}px)`;
+        }else{
+          alert("Pulsa las teclas direccionales")
+        }    
+      }
+    );
+
+  </script>
+  <style>
+    #cajaRoja{
+      width: 60px;
+      height: 60px;
+      background-color: red;
+      transform: translate(500px, 250px);
+    }
+
+    
+  </style>
+
+  </body>
+</html>

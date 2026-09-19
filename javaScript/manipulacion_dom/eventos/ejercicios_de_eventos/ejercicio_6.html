@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios de eventos 6</title>
+  </head>
+  <body >
+    <h1>Ejercicio 6</h1>
+    <hr />
+    <p><a href="/index.html">Atras</a></p>
+    <hr />
+      <p>
+      Crea una aplicación que contenga un párrafo con mucho texto. 
+      Debajo del párrafo debe aparecer un botón por cada vocal. 
+      Al pulsar sobre una vocal, esa vocal desaparecerá del texto.
+      </p>
+      <hr>
+    <main>
+     <p id="elMain">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+      Laborum amet totam, ipsum at explicabo velit itaque odit eaque voluptatibus 
+      cum consequatur inventore sunt officia rem quae obcaecati dolorum voluptas 
+      quidem. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt ex, 
+      minima nihil at odio neque doloribus quisquam repellat? Debitis reiciendis 
+      nostrum sint aperiam vero suscipit sequi repudiandae optio tempora ex.
+    </p>
+    <button data-letter="a">A</button>
+    <button data-letter="e">E</button>
+    <button data-letter="i">I</button>
+    <button data-letter="o">O</button>
+    <button data-letter="u">U</button>
+    </main>
+
+    <script>
+      const botonesRemove = document.getElementsByTagName("button");
+      const elMain = document.getElementById("elMain");
+      
+      for(const boton of botonesRemove){
+        boton.addEventListener("click",(event)=>{
+          const letrita = event.target.dataset.letter;
+          const nuevoMain = elMain.textContent.replaceAll(letrita,"").replaceAll(letrita.toUpperCase(), "");
+          elMain.textContent = nuevoMain;
+          event.target.disabled = true
+        })
+      }
+
+    </script>
+
+    <style>
+
+    </style>
+  </body>
+</html>

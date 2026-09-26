@@ -51,41 +51,61 @@
   
   <hr>
   <div id="tablero"></div>
-  <hr>
+  
   <p id="mensaje" hidden> TERMINASTE </p>
 
 
   <script>
-    const filas = 4;
-    const columnas = 4;
-    const cuadrosTotales = filas * columnas;
+    let filas = 0;
+    let columnas = 0;
+    let cuadrosTotales = filas * columnas;
     const tablero = document.getElementById("tablero");
     const mensaje = document.getElementById("mensaje");
     const colores =[  
-      "#FF0000", // Rojo
-      "#00CC33", // Verde
-      "#0044FF", // Azul
-      "#FFFF00", // Amarillo
-      "#FF8800", // Naranja
-      "#CC00FF", // Violeta
-      "#00FFFF", // Cian
-      "#8B4513", // Marrón
+
     ]
-    const losColoresPareja = shuffle([...colores,...colores]);
-    function shuffle(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-      }
-      return array;
-    }
+    do{
+     filas = parseInt(prompt("Dime el numero de filas quieres usar"));
+     columnas = parseInt(prompt("Dime el numero de columnas quieres usar"));
+     cuadrosTotales = filas * columnas;
+    }while(cuadrosTotales % 2 != 0);
+    let cantidadColores = cuadrosTotales/2;
+
+for( let i = 0 ; i < cantidadColores ; i++ ){
+  let rojo = Math.floor(Math.random() * (255 + 1));
+  let verde = Math.floor(Math.random() * (255 + 1));
+  let azul = Math.floor(Math.random() * (255 + 1));
+  let color =`rgb(${rojo},${verde},${azul})`;
+  colores.push(color);
+};
+
+
+const losColoresPareja = shuffle([...colores,...colores]);
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+
+
+
+
+
+
+    tablero.style.gridTemplateColumns = `repeat(${columnas}, 1fr)`;
+    tablero.style.gridTemplateRows = `repeat(${filas}, 1fr)`;
+
     
     let sumaCasillas = 0;
     let color1 = "";
     let color2 = "";
     let casillaElegida1 = "";
     let casillaElegida2 = "";
-    
+    let inicioCrono = false;
+
     for(let cuadrado = 0; cuadrado < cuadrosTotales; cuadrado++){
       const casilla = document.createElement("div");
       casilla.setAttribute("class","casilla");
@@ -102,11 +122,14 @@
         casilla.style = `background-color:${fondo}`;
         if (sumaCasillas === 0){
           if(casilla.dataset.open === "0"){
-            
+            if (inicioCrono === false){
+              stopwatch.start()
+            }
             casilla.dataset.open = "1";
             casillaElegida1 = casilla;
             sumaCasillas += 1;
             color1 = fondo;
+            inicioCrono = true;
           }
         }
 
@@ -192,9 +215,6 @@ var stopwatch = {
     return temp;
   }
 }
-stopwatch .start();
-    
-    
   </script>
 
 

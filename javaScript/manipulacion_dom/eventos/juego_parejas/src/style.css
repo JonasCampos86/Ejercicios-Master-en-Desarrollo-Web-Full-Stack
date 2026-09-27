@@ -1,0 +1,148 @@
+/* Título centrado, con un tamaño que se adapta al ancho de pantalla. */
+h1 {
+  text-align: center;
+  font-family: system-ui, sans-serif;
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 800;
+  color: #6366f1;
+  margin: 32px 16px;
+}
+
+/* Tarjeta que contiene las reglas del juego. */
+main {
+  max-width: 700px;
+  margin: 24px auto;
+  padding: 24px;
+  background: #f5f3ff;
+  border: 1px solid #ddd6fe;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.12);
+}
+
+main p {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #4c4563;
+}
+
+/* Centra el cronómetro y lo separa del resto del contenido. */
+h2 {
+  text-align: center;
+  margin: 28px 0;
+}
+
+/* Fondo, tipografía y espacio alrededor de la página. */
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 24px;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #eef2ff, #faf5ff, #fce7f3);
+  font-family: system-ui, sans-serif;
+}
+
+/* Aspecto del cronómetro. Los números mantienen un ancho uniforme. */
+#timer {
+  display: inline-block;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  color: white;
+  font-family: monospace;
+  font-size: 32px;
+  font-variant-numeric: tabular-nums;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+}
+
+/* En móvil, el tablero crea las filas necesarias según el ancho disponible. */
+#tablero {
+  background-color: transparent;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: auto;
+
+  /* Coloca tantas columnas como quepan.
+     Los 56px incluyen los 50px de la casilla y sus bordes. */
+  grid-template-columns: repeat(auto-fit, 56px);
+  grid-template-rows: none;
+
+  justify-content: center;
+  gap: 10px;
+}
+
+/* En pantallas mayores, respeta las dimensiones elegidas.
+   Si el tablero es muy ancho, permite recorrerlo con scroll horizontal. */
+@media (min-width: 601px) {
+  #tablero {
+    width: max-content;
+
+    /* Estas variables reciben sus valores desde main.js. */
+    grid-template-columns: repeat(var(--columnas), 56px);
+    grid-template-rows: repeat(var(--filas), 56px);
+  }
+
+  #zonaJuego {
+    width: max-content;
+    min-width: 100%;
+  }
+}
+
+/* Las casillas empiezan negras; JavaScript muestra después su color. */
+.casilla {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border: 3px solid white;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+  transition: transform 0.3s ease-in-out,
+              box-shadow 0.3s ease-in-out;
+}
+
+/* Eleva ligeramente la casilla al pasar el puntero. */
+.casilla:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(168, 85, 247, 0.6);
+}
+
+/* Desplaza la casilla hacia abajo mientras se pulsa. */
+.casilla:active {
+  transform: translateY(1px);
+}
+
+/* Botón de nueva partida. */
+#nuevaPartida {
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Refuerza la sombra y eleva el botón al pasar el puntero. */
+#nuevaPartida:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(168, 85, 247, 0.6);
+  background: linear-gradient(135deg, #4f46e5 0%, #9333ea 100%);
+}
+
+#nuevaPartida:active {
+  transform: translateY(1px);
+}
+
+/* Coloca tablero, mensaje y botón en vertical, centrados y separados. */
+#zonaJuego {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}

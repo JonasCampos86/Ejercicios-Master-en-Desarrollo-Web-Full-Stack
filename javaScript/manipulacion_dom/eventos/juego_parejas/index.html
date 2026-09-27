@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Información de la página -->
+    <title>Juego de parejas | Jonas Campos</title>
+    <meta
+      name="description"
+      content="Juego de memoria con parejas de colores, tablero personalizable y guardado automático de la partida. Creado por @JonasCampos86."
+    />
+    <meta name="author" content="@JonasCampos86" />
+    <meta name="theme-color" content="#6366f1" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Juego de las parejas</h1>
+    </header>
+
+    <!-- Reglas del juego -->
+    <main>
+      <p>
+        ¡Encuentra todas las parejas de colores! Elige el número de filas y
+        columnas: el total de casillas debe ser par. Pulsa dos casillas para
+        descubrir sus colores. Si coinciden, quedarán descubiertas; si no,
+        volverán a ocultarse. El cronómetro comenzará al seleccionar la primera
+        casilla y se detendrá cuando completes todas las parejas.
+        <br /><br />
+        En móvil, las casillas se distribuyen según el espacio disponible,
+        manteniendo el total elegido.
+        <br /><br />
+        Tu progreso se guarda automáticamente. Al volver o recargar la página,
+        recuperarás las parejas acertadas y el tiempo acumulado. El cronómetro
+        continuará cuando pulses una casilla cerrada. Para empezar de nuevo,
+        pulsa «Nueva partida».
+      </p>
+
+      <h2>
+        <span id="timer" aria-label="Tiempo de partida">00:00:00</span>
+      </h2>
+
+      <!-- JavaScript crea las casillas y recupera la partida aquí -->
+      <div id="zonaJuego">
+        <div id="tablero" role="group" aria-label="Tablero de parejas"></div>
+
+        <p id="mensaje" role="status" hidden>
+          ¡Enhorabuena! Has encontrado todas las parejas.
+        </p>
+
+        <button id="nuevaPartida" type="button">Nueva partida</button>
+      </div>
+    </main>
+
+    <!-- Crédito del creador -->
+    <footer>
+      <p>Creado por @JonasCampos86 · Proyecto de aprendizaje de JavaScript.</p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -146,3 +146,137 @@ body {
   align-items: center;
   gap: 24px;
 }
+
+/* Presentación de la pantalla inicial. */
+#pantallaInicio {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#pantallaInicio h2 {
+  margin: 0 0 24px;
+  color: #6366f1;
+  font-size: clamp(22px, 5vw, 30px);
+}
+
+/* Formulario: una columna en pantallas pequeñas. */
+#configuracion {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 24px;
+  margin-bottom: 28px;
+  background: linear-gradient(135deg, #eef2ff, #faf5ff);
+  border: 1px solid #ddd6fe;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(168, 85, 247, 0.12);
+}
+
+#configuracion > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+#configuracion label {
+  color: #4c4563;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Campos amplios para poder utilizarlos cómodamente con el dedo. */
+#configuracion input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 16px;
+  border: 2px solid #ddd6fe;
+  border-radius: 12px;
+  background-color: white;
+  color: #4338ca;
+  font: inherit;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Indica claramente qué campo se está editando. */
+#configuracion input:focus {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+  border-color: #a855f7;
+  box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.12);
+}
+
+/* Botón Jugar, con el mismo acabado que Nueva partida. */
+#configuracion button {
+  min-height: 48px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  color: white;
+  font: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#configuracion button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(168, 85, 247, 0.5);
+}
+
+#configuracion button:active {
+  transform: translateY(1px);
+}
+
+#configuracion button:focus-visible {
+  outline: 3px solid #4338ca;
+  outline-offset: 4px;
+}
+
+/* Con espacio suficiente, coloca los campos juntos
+   y mantiene el botón debajo, ocupando ambas columnas. */
+@media (min-width: 480px) {
+  #configuracion {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #configuracion button {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Crédito del autor, separado del juego y centrado. */
+footer {
+  margin-top: 40px;
+  padding: 24px 16px;
+  text-align: center;
+  color: #6b6380;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+footer::before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  margin: 0 auto 18px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+}
+
+footer p {
+  margin: 0;
+}
+
+footer strong {
+  color: #6366f1;
+  font-weight: 600;
+}

@@ -23,42 +23,64 @@
 
     <!-- Reglas del juego -->
     <main>
-      <p>
-        ¡Encuentra todas las parejas de colores! Elige el número de filas y
-        columnas: el total de casillas debe ser par. Pulsa dos casillas para
-        descubrir sus colores. Si coinciden, quedarán descubiertas; si no,
-        volverán a ocultarse. El cronómetro comenzará al seleccionar la primera
-        casilla y se detendrá cuando completes todas las parejas.
-        <br /><br />
-        En móvil, las casillas se distribuyen según el espacio disponible,
-        manteniendo el total elegido.
-        <br /><br />
-        Tu progreso se guarda automáticamente. Al volver o recargar la página,
-        recuperarás las parejas acertadas y el tiempo acumulado. El cronómetro
-        continuará cuando pulses una casilla cerrada. Para empezar de nuevo,
-        pulsa «Nueva partida».
-      </p>
-
-      <h2>
-        <span id="timer" aria-label="Tiempo de partida">00:00:00</span>
-      </h2>
-
-      <!-- JavaScript crea las casillas y recupera la partida aquí -->
-      <div id="zonaJuego">
-        <div id="tablero" role="group" aria-label="Tablero de parejas"></div>
-
-        <p id="mensaje" role="status" hidden>
-          ¡Enhorabuena! Has encontrado todas las parejas.
+      <section id="pantallaInicio">
+        <h2>CONFIGURA TU PARTIDA</h2>
+        <form action="" id="configuracion">
+          <div>
+            <label for="filas">Filas</label>
+            <input type="number" id="filas" name="filas" min="1" step="1" value="4" required>
+          </div>
+          <div>
+            <label for="columnas">Columnas</label>
+            <input type="number" id="columnas" name="columnas" min="1" step="1" value="4" required>
+          </div>
+          <button type="submit">Jugar</button>
+        </form>
+                <p>
+          ¡Encuentra todas las parejas de colores! Elige el número de filas y
+          columnas: el total de casillas debe ser par. Pulsa dos casillas para
+          descubrir sus colores. Si coinciden, quedarán descubiertas; si no,
+          volverán a ocultarse. El cronómetro comenzará al seleccionar la primera
+          casilla y se detendrá cuando completes todas las parejas.
+          <br /><br />
+          En móvil, las casillas se distribuyen según el espacio disponible,
+          manteniendo el total elegido.
+          <br /><br />
+          Tu progreso se guarda automáticamente. Al volver o recargar la página,
+          recuperarás las parejas acertadas y el tiempo acumulado. El cronómetro
+          continuará cuando pulses una casilla cerrada. Para empezar de nuevo,
+          pulsa «Nueva partida».
         </p>
+      </section>
+      <section id="pantallaJuego" hidden>
 
-        <button id="nuevaPartida" type="button">Nueva partida</button>
-      </div>
+
+        <h2>
+          <span id="timer" aria-label="Tiempo de partida">00:00:00</span>
+        </h2>
+
+        <!-- JavaScript crea las casillas y recupera la partida aquí -->
+        <div id="zonaJuego">
+          <div id="tablero" role="group" aria-label="Tablero de parejas"></div>
+
+          <p id="mensaje" role="status" hidden>
+            ¡Enhorabuena! Has encontrado todas las parejas.
+          </p>
+
+          <button id="nuevaPartida" type="button">Nueva partida</button>
+        </div>
+      </section>
+
     </main>
 
     <!-- Crédito del creador -->
     <footer>
-      <p>Creado por @JonasCampos86 · Proyecto de aprendizaje de JavaScript.</p>
-    </footer>
+  <p>
+    Creado por <strong>@JonasCampos86</strong>
+    <br />
+    Proyecto de aprendizaje de JavaScript
+  </p>
+</footer>
 
     <script type="module" src="/src/main.js"></script>
   </body>

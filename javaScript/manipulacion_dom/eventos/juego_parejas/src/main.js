@@ -77,43 +77,67 @@ if (losColoresParejaRecuperados != null) {
   filas = lasFilasRecuperadas;
   columnas = lasColumnasRecuperadas;
   cuadrosTotales = filas * columnas;
-} else {
-  // Si no hay partida guardada, prepara una lista de colores nueva.
-  const colores = [];
-
-  // Pregunta las dimensiones y recoge los valores del objeto devuelto.
-  const dimensiones = pedirDimensiones();
-  filas = dimensiones.filas;
-  columnas = dimensiones.columnas;
-
-  // Calcula el total de casillas y cuántos colores hay que generar.
-  // Cada color se utilizará dos veces para formar una pareja.
-  cuadrosTotales = filas * columnas;
-  let cantidadColores = cuadrosTotales / 2;
-
-  // Genera un color por pareja y lo añade al array.
-  for (let i = 0; i < cantidadColores; i++) {
-    let color = crearColor();
-    colores.push(color);
-  }
-
-  // Copia dos veces los colores en un nuevo array y mezcla su orden.
-  // Cada posición del resultado corresponderá a una casilla del tablero.
-  losColoresPareja = shuffle([...colores, ...colores]);
-
-  // Guarda el orden de los colores y las dimensiones de la nueva partida.
-  // JSON.stringify convierte los datos en texto para localStorage.
-  // Estas escrituras solo se realizan al crear una partida nueva.
-  localStorage.setItem("losColoresPareja", JSON.stringify(losColoresPareja));
-  localStorage.setItem("filas", JSON.stringify(filas));
-  localStorage.setItem("columnas", JSON.stringify(columnas));
 }
 
 // Obtiene los elementos del HTML donde se dibuja el tablero
 // y se muestra el mensaje de victoria.
 const tablero = document.getElementById("tablero");
 const mensaje = document.getElementById("mensaje");
+///////////////////////////////////////////////////////////
 
+const pantallaInicio = document.getElementById("pantallaInicio");
+const pantallaJuego = document.getElementById("pantallaJuego");
+const configuracion = document.getElementById("configuracion");
+configuracion.addEventListener("submit",(event)=>{
+  event.preventDefault();
+  const filasElegidas = Number(document.getElementById("filas").value);
+  const columnasElegidas = Number(document.getElementById("columnas").value);
+
+  if(filasElegidas*columnasElegidas % 2 != 0){
+    alert("El total de casillas debe ser par. Cambia las filas o las columnas")
+    return
+  }
+  prepararPartida(filasElegidas, columnasElegidas);
+  mostrarPartida();
+
+});
+
+function prepararPartida ( filasElegidas, columnasElegidas){
+   
+      // Si no hay partida guardada, prepara una lista de colores nueva.
+      const colores = [];
+
+     // Usa las dimensiones recibidas del formulario.
+      filas = filasElegidas;
+      columnas = columnasElegidas;
+
+      // Calcula el total de casillas y cuántos colores hay que generar.
+      // Cada color se utilizará dos veces para formar una pareja.
+      cuadrosTotales = filas * columnas;
+      let cantidadColores = cuadrosTotales / 2;
+
+      // Genera un color por pareja y lo añade al array.
+      for (let i = 0; i < cantidadColores; i++) {
+        let color = crearColor();
+        colores.push(color);
+      }
+
+      // Copia dos veces los colores en un nuevo array y mezcla su orden.
+      // Cada posición del resultado corresponderá a una casilla del tablero.
+      losColoresPareja = shuffle([...colores, ...colores]);
+
+      // Guarda el orden de los colores y las dimensiones de la nueva partida.
+      // JSON.stringify convierte los datos en texto para localStorage.
+      // Estas escrituras solo se realizan al crear una partida nueva.
+      localStorage.setItem("losColoresPareja", JSON.stringify(losColoresPareja));
+      localStorage.setItem("filas", JSON.stringify(filas));
+      localStorage.setItem("columnas", JSON.stringify(columnas));
+    
+}
+
+function mostrarPartida() {
+  pantallaInicio.hidden = true;
+  pantallaJuego.hidden = false;
 // Entrega las dimensiones elegidas al CSS mediante propiedades
 // personalizadas, también llamadas variables CSS.
 // El CSS las utiliza en pantallas grandes; en móvil adapta las columnas
@@ -155,4 +179,9 @@ for (let cuadrado = 0; cuadrado < cuadrosTotales; cuadrado++) {
   casilla.addEventListener("click", (event) => {
     juego.manejarClick(event, casilla);
   });
+}
+}
+
+if (losColoresParejaRecuperados != null) {
+  mostrarPartida();
 }

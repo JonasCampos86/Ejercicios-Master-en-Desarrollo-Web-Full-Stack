@@ -114,6 +114,12 @@ body {
   transform: translateY(1px);
 }
 
+/* Da estilo al focus  */
+.casilla:focus-visible {
+  outline: 3px solid #4338ca;
+  outline-offset: 3px;
+}
+
 /* Botón de nueva partida. */
 #nuevaPartida {
   background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);

@@ -21,8 +21,8 @@ export function crearColor() {
 // Crea una casilla y prepara los datos que necesita el juego.
 // Recibe como parámetro el color que tendrá al descubrirse.
 export function creaCasilla(color) {
-  const casilla = document.createElement("div");
-
+  const casilla = document.createElement("button");
+  casilla.type = "button";
   // Aplica la clase que define su tamaño y aspecto en el CSS.
   casilla.setAttribute("class", "casilla");
 

@@ -29,6 +29,13 @@ if (tiempoActualRecuperados != null) {
   min = 0;
 }
 
+// Convierte el tiempo recuperado a milisegundos.
+// La variable ms del código anterior representa centésimas.
+let tiempoAcumulado = min * 60000 + sec * 1000 + ms * 10;
+
+// Instante de inicio, compartido por los métodos del cronómetro.
+let tiempoInicio;
+
 // Agrupa las operaciones del cronómetro.
 // export permite importarlo desde main.js y pasarlo al juego.
 export var stopwatch = {
@@ -39,22 +46,23 @@ export var stopwatch = {
     // Guarda el identificador del intervalo para poder detenerlo después.
     // El navegador puede retrasar las ejecuciones: no es una medida exacta
     // del tiempo real transcurrido.
-    count = setInterval(function () {
-      // Gestiona el paso de centésimas a segundos y de segundos a minutos.
-      // Este bloque conserva la lógica original, que comprueba los límites
-      // antes de incrementar los valores.
-      if (ms == 100) {
-        ms = 0;
 
-        if (sec == 60) {
-          sec = 0;
-          min++;
-        } else {
-          sec++;
-        }
-      } else {
-        ms++;
-      }
+    // Guarda el instante de inicio para medir cuánto tiempo pasa desde aquí.
+    tiempoInicio = performance.now();
+
+    // Recuerda cuándo se guardó el tiempo por última vez.
+    let ultimoGuardado = tiempoInicio;
+    
+    count = setInterval(function () {
+
+      // Suma el tiempo de partidas anteriores y lo transcurrido desde este inicio.
+      const tiempoTranscurrido =
+        tiempoAcumulado + (performance.now() - tiempoInicio);
+
+      // Convierte el total a minutos, segundos y centésimas para mostrarlo.
+      min = Math.floor(tiempoTranscurrido / 60000);
+      sec = Math.floor(tiempoTranscurrido / 1000) % 60;
+      ms = Math.floor(tiempoTranscurrido / 10) % 100;
 
       // Añade un cero delante de los valores menores que diez.
       malt = stopwatch.pad(min);
@@ -64,24 +72,53 @@ export var stopwatch = {
       // Forma el texto minutos:segundos:centésimas y lo muestra.
       stopwatch.update(malt + ":" + salt + ":" + msalt);
 
-      // Reúne los valores numéricos actuales en un objeto.
-      const tiempoActual = {
-        min: min,
-        sec: sec,
-        ms: ms,
-      };
+      // Guarda como máximo una vez por segundo.
+      const ahora = performance.now();
 
-      // Convierte el objeto en texto y sobrescribe el tiempo guardado.
-      // Al recargar, se recuperará la última actualización almacenada.
-      localStorage.setItem("tiempoActual", JSON.stringify(tiempoActual));
-    }, 10);
+      if (ahora - ultimoGuardado >= 1000) {
+              // Reúne los valores numéricos actuales en un objeto.
+        const tiempoActual = {
+          min: min,
+          sec: sec,
+          ms: ms,
+        };
+            // Convierte el objeto en texto y sobrescribe el tiempo guardado.
+            // Al recargar, se recuperará la última actualización almacenada.
+        localStorage.setItem("tiempoActual", JSON.stringify(tiempoActual));
+      } ultimoGuardado = ahora;
+    } ,10);
   },
 
   // Detiene las actualizaciones y el guardado periódico del tiempo.
   // Conserva los valores actuales en las variables y en localStorage.
   stop: function () {
-    clearInterval(count);
-  },
+  // Si ya está parado, no vuelve a sumar el tiempo.
+  if (count == null) return;
+
+  clearInterval(count);
+  count = null;
+
+  // Añade el tiempo transcurrido desde el último arranque.
+  tiempoAcumulado += performance.now() - tiempoInicio;
+
+  // Calcula los valores finales, aunque el intervalo no haya actualizado aún.
+  min = Math.floor(tiempoAcumulado / 60000);
+  sec = Math.floor(tiempoAcumulado / 1000) % 60;
+  ms = Math.floor(tiempoAcumulado / 10) % 100;
+
+  // Guarda el tiempo final, incluida la fracción pendiente del último segundo.
+  localStorage.setItem(
+    "tiempoActual",
+    JSON.stringify({ min, sec, ms })
+  );
+
+  // Muestra el mismo tiempo que acaba de guardarse.
+  stopwatch.update(
+    stopwatch.pad(min) + ":" +
+    stopwatch.pad(sec) + ":" +
+    stopwatch.pad(ms)
+  );
+},
 
   // Sustituye el texto del elemento con id="timer".
   // firstChild accede al nodo de texto que contiene ese elemento.
@@ -112,3 +149,8 @@ malt = stopwatch.pad(min);
 salt = stopwatch.pad(sec);
 msalt = stopwatch.pad(ms);
 stopwatch.update(malt + ":" + salt + ":" + msalt);
+
+// Detiene y guarda el cronómetro al abandonar o recargar la página.
+window.addEventListener("pagehide", () => {
+  stopwatch.stop();
+});

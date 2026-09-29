@@ -43,6 +43,13 @@ export class JuegoParejas {
     const fondo = event.target.dataset.color;
     casilla.style = `background-color:${fondo}`;
 
+    // Actualiza el nombre accesible con la posición y el color descubierto.
+    // Permite identificar la casilla con un lector de pantalla.
+    casilla.setAttribute(
+      "aria-label",
+      `Casilla ${Number(casilla.dataset.position) + 1}, color ${fondo}`
+    );
+
     // Si no hay ninguna selección pendiente, intenta registrar la primera.
     if (this.sumaCasillas === 0) {
       // Solo cuentan las casillas cerradas.
@@ -92,6 +99,15 @@ export class JuegoParejas {
           // Oculta de nuevo sus colores.
           this.casillaElegida1.style = `background-color: black`;
           this.casillaElegida2.style = `background-color: black`;
+
+          // Restablece los nombres accesibles al ocultar las casillas.
+          // Así el lector de pantalla deja de anunciar sus colores.
+          for (const casilla of [this.casillaElegida1, this.casillaElegida2]) {
+            casilla.setAttribute(
+              "aria-label",
+              `Casilla ${Number(casilla.dataset.position) + 1}, oculta`
+            );
+          }
         }, 500);
       } else {
         // Si coinciden, permanecen abiertas y se permite otro intento.

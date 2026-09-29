@@ -159,6 +159,9 @@ for (let cuadrado = 0; cuadrado < cuadrosTotales; cuadrado++) {
   // El atributo convierte el índice numérico en texto.
   casilla.setAttribute("data-position", cuadrado);
 
+
+  casilla.setAttribute("aria-label", `Casilla ${cuadrado + 1}, oculta`);
+
   // Añade la casilla al tablero de la página.
   tablero.append(casilla);
 
@@ -170,6 +173,13 @@ for (let cuadrado = 0; cuadrado < cuadrosTotales; cuadrado++) {
     // Esto se hace al cargar, sin necesidad de pulsar la casilla.
     casilla.dataset.open = "1";
     casilla.style.backgroundColor = casilla.dataset.color;
+    // Describe la casilla recuperada como descubierta,
+    // para que su nombre accesible coincida con lo que se muestra.
+    casilla.setAttribute(
+      "aria-label",
+      `Casilla ${cuadrado + 1}, color ${casilla.dataset.color}`
+    );
+
   }
 
   // Conecta el clic con el método del juego y le pasa el evento

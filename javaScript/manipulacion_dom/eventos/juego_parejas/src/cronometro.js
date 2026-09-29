@@ -85,7 +85,8 @@ export var stopwatch = {
             // Convierte el objeto en texto y sobrescribe el tiempo guardado.
             // Al recargar, se recuperará la última actualización almacenada.
         localStorage.setItem("tiempoActual", JSON.stringify(tiempoActual));
-      } ultimoGuardado = ahora;
+        ultimoGuardado = ahora;
+      } 
     } ,10);
   },
 
